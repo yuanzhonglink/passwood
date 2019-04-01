@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!--pom的模型版本-->
+    <modelVersion>4.0.0</modelVersion>
+
+    <!--项目标识-->
+    <groupId>com.pass</groupId>
+    <artifactId>passwood</artifactId>
+
+    <packaging>pom</packaging>
+    <!--项目版本-->
+    <version>1.0-SNAPSHOT</version>
+
+    <!--模块-->
+    <modules>
+        <module>pass_excel</module>
+        <module>pass_read</module>
+    </modules>
+
+    <dependencies>
+        <!-- 引入poi，解析workbook视图 -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>3.16</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>3.14</version>
+        </dependency>
+
+        <!--lombok-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.18</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!--支持 @ConfigurationProperties 注解-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <version>2.0.2.RELEASE</version>
+        </dependency>
+
+    </dependencies>
+</project>
