@@ -15,6 +15,7 @@
         <module>pass_excel</module>
         <module>pass_read</module>
         <module>pass_license</module>
+        <module>pass_encrypt_decode</module>
     </modules>
 
     <parent>
