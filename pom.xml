@@ -20,6 +20,7 @@
         <module>pass_license</module>
         <module>pass_encrypt_decode</module>
         <module>pass_consul_client</module>
+        <module>pass_consul_server</module>
     </modules>
 
     <parent>

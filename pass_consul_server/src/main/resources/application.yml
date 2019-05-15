@@ -1,0 +1,31 @@
+spring:
+  # 数据源
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/dongfang?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driverClassName: com.mysql.jdbc.Driver
+    logSlowSql: true
+  cloud:
+    consul:
+      host: 127.0.0.1
+      port: 8500
+      enabled: true #启用 spring cloud consul
+      discovery:
+        # 配置服务注册到Consul上
+        register: true # 是否开启在 consul 中注册服务
+#       自定义
+        tags: version=1.0,author=dfzq
+        healthCheckPath: /consul/health
+#       唯一标识
+        instanceId: ${spring.application.name}:${server.port}
+        health-check-interval: 5s
+        service-name: ${spring.application.name} #设置 注册到 consul 的服务名称
+#        ip-address: 192.168.0.100 # 访问服务时使用的 ip地址 （还必须设置preferIpAddress才能使用）
+#        prefer-ip-address: true
+  application:
+    name: consul-server
+
+server:
+  port: 1101
