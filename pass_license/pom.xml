@@ -15,7 +15,6 @@
         <dependency>
             <groupId>de.schlichtherle.truelicense</groupId>
             <artifactId>truelicense-core</artifactId>
-            <version>1.32</version>
         </dependency>
 
         <dependency>
