@@ -32,9 +32,9 @@ public class ConsulClientController {
         return "hello consul--client";
     }
 
-    @RequestMapping(value = "/get1",method = RequestMethod.GET)
+    @RequestMapping(value = "/method_1",method = RequestMethod.GET)
     @HystrixCommand(fallbackMethod = "fallback")
-    public String get1(){
+    public String method_1(){
         List<String> list = discoveryClient.getServices();
         Iterator<String> listIterator = list.iterator();
         while (listIterator.hasNext()) {
@@ -53,18 +53,16 @@ public class ConsulClientController {
             System.out.println("---------------------------------------------------------");
         }
 
-        String str = restTemplate.getForObject("http://consul-server/consul/demo2", String.class);
+        String str = restTemplate.getForObject("http://consul-server/consul/method_1", String.class);
         return str;
     }
 
-    @RequestMapping(value = "/get2",method = RequestMethod.GET)
-    @HystrixCommand(fallbackMethod = "fallback")
+    @RequestMapping(value = "/method_2",method = RequestMethod.GET)
     public String get2() {
-        String str = restTemplate.getForObject("http://consul-server/consul/demo1", String.class);
-        return str;
+        return "hello consul-client";
     }
 
-    public String fallback() {
+    private String fallback() {
         return "fallback";
     }
 }
