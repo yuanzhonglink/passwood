@@ -33,6 +33,7 @@ public class ConsulClientController {
     }
 
     @RequestMapping(value = "/get1",method = RequestMethod.GET)
+    @HystrixCommand(fallbackMethod = "fallback")
     public String get1(){
         List<String> list = discoveryClient.getServices();
         Iterator<String> listIterator = list.iterator();
@@ -51,7 +52,9 @@ public class ConsulClientController {
             }
             System.out.println("---------------------------------------------------------");
         }
-        return "get1";
+
+        String str = restTemplate.getForObject("http://consul-server/consul/demo2", String.class);
+        return str;
     }
 
     @RequestMapping(value = "/get2",method = RequestMethod.GET)
