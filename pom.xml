@@ -16,9 +16,6 @@
 
     <!--模块-->
     <modules>
-        <module>pass_excel</module>
-        <module>pass_license</module>
-        <module>pass_encrypt_decode</module>
         <module>pass_consul_client</module>
         <module>pass_consul_server</module>
         <module>pass_util</module>
@@ -76,12 +73,6 @@
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.slf4j</groupId>
-                <artifactId>slf4j-api</artifactId>
-                <version>${slf4j.version}</version>
             </dependency>
 
             <dependency>
