@@ -1,7 +1,7 @@
 package com.pass.util.license.swing;
 
 import com.pass.util.date.DateUtils;
-import com.pass.util.license.create.CreateLicense;
+import com.pass.util.license.util.CreateLicense;
 
 import javax.swing.*;
 import java.awt.*;

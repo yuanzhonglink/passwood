@@ -18,7 +18,7 @@ public class PathUtil {
      * @since 2019/4/30
      */
     public static String getDeskPath () {
-        File deskDir = FileSystemView.getFileSystemView() .getHomeDirectory();
+        File deskDir = FileSystemView.getFileSystemView().getHomeDirectory();
         String deskPath = deskDir.getAbsolutePath();
         return deskPath;
     }

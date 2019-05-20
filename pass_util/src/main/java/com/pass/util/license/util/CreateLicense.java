@@ -1,4 +1,4 @@
-package com.pass.util.license.create;
+package com.pass.util.license.util;
 
 import com.pass.util.date.DateUtils;
 import com.pass.util.encrypt.DesEncryptUtils;
