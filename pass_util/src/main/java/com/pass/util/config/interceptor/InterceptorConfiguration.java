@@ -8,6 +8,12 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 /**
  * 拦截器配置
+ * 原理：
+ *  1.所有的拦截器(Interceptor)和处理器(Handler)都注册在HandlerMapping中。
+ *  2.Spring MVC中所有的请求都是由DispatcherServlet分发的。
+ *  3.当请求进入DispatcherServlet.doDispatch()时候，首先会得到处理该请求的
+ *  Handler（即Controller中对应的方法）以及所有拦截该请求的拦截器。拦截器就是在这里被调用开始工作的。
+ *
  *
  * @Author yuanzhonglin
  * @since 2019/5/20

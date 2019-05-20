@@ -47,6 +47,7 @@
         <fastjson.version>1.2.54</fastjson.version>
     </properties>
 
+    <!-- 引入的包存在于每个model中 -->
     <dependencies>
         <!--支持 @ConfigurationProperties 注解-->
         <dependency>
@@ -73,6 +74,7 @@
         </dependency>
     </dependencies>
 
+    <!--管理引入包的版本：每个model中进行引入，不过不用引入version-->
     <dependencyManagement>
         <dependencies>
             <dependency>
