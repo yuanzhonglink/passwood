@@ -21,10 +21,18 @@ public class InetWorkHost {
 
     private static final Pattern IP_PATTERN = Pattern.compile("((2[0-4]\\d|25[0-5]|[01]?\\d\\d?)\\.){3}(2[0-4]\\d|25[0-5]|[01]?\\d\\d?)");
 
-    public static String getLocalAddress() throws Exception {
-        String ip = "127.0.0.1";
+    public static InetAddress getLocalAddress() throws Exception {
+
+        // 一、直接获取本机ip
+        InetAddress inetAddress = InetAddress.getLocalHost();
+        if (isValidAddress(inetAddress)) {
+            return inetAddress;
+        }
+
+        // 二、直接获取本机ip失败
         List<InetAddress> list = new ArrayList<>();
 
+        // 获取所有网卡信息
         Enumeration<NetworkInterface> interfaces = NetworkInterface.getNetworkInterfaces();
         while (interfaces.hasMoreElements()) {
 
@@ -40,20 +48,20 @@ public class InetWorkHost {
             }
         }
 
+        // 遍历获取符合要求的ipv4地址
         Iterator<InetAddress> iterator = list.iterator();
-
-        InetAddress address;
+        InetAddress address = null;
         do {
             if (!iterator.hasNext()) {
                 break;
             }
             address = iterator.next();
-            ip = address.getHostAddress();
         } while (address == null || !(address instanceof Inet4Address) || !isValidAddress(address));
 
-        return ip;
+        return address;
     }
 
+    // 校验是否为ipv4地址
     private static boolean isValidAddress(InetAddress address) {
         if (address != null && !address.isLoopbackAddress()) {
             String ip = address.getHostAddress();
@@ -67,12 +75,13 @@ public class InetWorkHost {
         }
     }
 
+    // 校验ip格式是否正确
     private static boolean isValidIPv4(String ip) {
         return ip == null ? false : IP_PATTERN.matcher(ip).matches();
     }
 
     public static void main(String[] args) throws Exception{
-        String localAddress = getLocalAddress();
-        System.out.println(localAddress);
+        InetAddress localAddress = getLocalAddress();
+        System.out.println(localAddress == null ? "127.0.0.1" : localAddress.getHostAddress());
     }
 }
