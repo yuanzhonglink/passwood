@@ -53,6 +53,8 @@ public class CreateLicense {
 
 	private static final String PROPERTIES_PATH = "license/param.properties";
 
+	private String message = "";
+
 	public void setParam(String afterTime, String path) {
 		Properties prop = new Properties();
 		InputStream in = getClass().getClassLoader().getResourceAsStream(PROPERTIES_PATH);
@@ -88,9 +90,13 @@ public class CreateLicense {
 			manager.store(content, new File(licPath));
 		} catch (Exception e) {
 			logger.error("证书生成失败", e);
+			message = "证书生成失败，失败信息为[" + e.getMessage() + "]";
+			logger.error(message, e);
 			return false;
 		}
 		logger.info("生成证书成功");
+		message = "生成证书成功，文件路径为[" + licPath + "]";
+		logger.info(message);
 		return true;
 	}
 
@@ -120,5 +126,9 @@ public class CreateLicense {
 		entity.setNodeNum(Integer.parseInt(nodeNum));
 		content.setExtra(entity.toString());
 		return content;
+	}
+
+	public String getMessage() {
+		return message;
 	}
 }
