@@ -9,7 +9,7 @@ spring:
     logSlowSql: true
   cloud:
     consul:
-      host: 192.168.32.28
+      host: 192.168.32.15
       port: 9500
       enabled: true #启用 spring cloud consul
       discovery:

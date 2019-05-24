@@ -38,13 +38,13 @@
         <lombok.version>1.16.18</lombok.version>
         <slf4j.version>1.7.25</slf4j.version>
         <commons-codec.version>1.11</commons-codec.version>
-        <consul.version>2.1.1.RELEASE</consul.version>
         <druid.version>1.1.4</druid.version>
         <mysql.version>5.1.44</mysql.version>
         <junit.version>4.12</junit.version>
         <spring-cloud.version>Greenwich.SR1</spring-cloud.version>
         <truelicense.version>1.32</truelicense.version>
         <fastjson.version>1.2.54</fastjson.version>
+        <consul-api.version>1.4.2</consul-api.version>
     </properties>
 
     <!-- 引入的包存在于每个model中 -->
@@ -141,6 +141,13 @@
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
                 <version>${fastjson.version}</version>
+            </dependency>
+
+            <!-- consul API -->
+            <dependency>
+                <groupId>com.ecwid.consul</groupId>
+                <artifactId>consul-api</artifactId>
+                <version>${consul-api.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

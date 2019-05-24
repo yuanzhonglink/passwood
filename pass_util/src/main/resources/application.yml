@@ -12,3 +12,7 @@ spring:
 
 server:
   port: 1107
+
+consul:
+  ip: 192.168.32.15
+  port: 9500
