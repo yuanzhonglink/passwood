@@ -20,6 +20,7 @@ spring:
         #       唯一标识
         instanceId: ${spring.application.name}:${server.port}
         health-check-interval: 5s
+      acl-token: 6171fe30-1138-4127-9b08-60069e945550
   application:
     name: consul-client
 

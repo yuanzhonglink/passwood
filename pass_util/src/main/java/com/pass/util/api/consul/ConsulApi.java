@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.ecwid.consul.v1.ConsulClient;
 import com.ecwid.consul.v1.QueryParams;
 import com.ecwid.consul.v1.Response;
+import com.ecwid.consul.v1.acl.model.Acl;
 import com.ecwid.consul.v1.acl.model.AclType;
 import com.ecwid.consul.v1.acl.model.NewAcl;
 import com.ecwid.consul.v1.acl.model.UpdateAcl;
@@ -24,6 +25,8 @@ import java.util.Map;
  * @date 2019/5/22
  */
 public class ConsulApi {
+
+    private static final String ACL_TOKEN = "6171fe30-1138-4127-9b08-60069e945550";
 
     private static ConsulClient consulClient = initConsul();
 
@@ -47,12 +50,12 @@ public class ConsulApi {
 
         newService.setCheck(serviceCheck);
 
-        consulClient.agentServiceRegister(newService);
+        consulClient.agentServiceRegister(newService, ACL_TOKEN);
     }
 
     // 删除服务
     public static void deleteService(String serviceId) {
-        consulClient.agentServiceDeregister(serviceId);
+        consulClient.agentServiceDeregister(serviceId, ACL_TOKEN);
     }
 
     // 获取consul成员
@@ -81,19 +84,19 @@ public class ConsulApi {
 
     // 设置KV
     public static void setKV(String key, String value) {
-        Response<Boolean> response = consulClient.setKVValue(key, value);
+        Response<Boolean> response = consulClient.setKVValue(key, value, ACL_TOKEN, null);
         System.out.println("----setKV----:" + response.getValue());
     }
 
     // 查询KV
     public static void getKV(String key) {
-        Response<GetValue> kvValue = consulClient.getKVValue(key);
+        Response<GetValue> kvValue = consulClient.getKVValue(key, ACL_TOKEN);
         System.out.println("----getKV----:" + kvValue.getValue().getDecodedValue());
     }
 
     // 删除KV
     public static void deleteKV(String key) {
-        consulClient.deleteKVValue(key);
+        consulClient.deleteKVValue(key, ACL_TOKEN);
     }
 
     public static void findRaftPeers() {
@@ -137,6 +140,16 @@ public class ConsulApi {
         System.out.println("----updACL----");
     }
 
+    public static void getACLList() {
+        Response<List<Acl>> aclList = consulClient.getAclList("6171fe30-1138-4127-9b08-60069e945550");
+        System.out.println("----getACLList----:" + JSONObject.toJSON(aclList.getValue()));
+    }
+
+    public static void getACL() {
+        Response<Acl> acl = consulClient.getAcl("7b21ff0e-c71c-1678-caed-7c47f204032c");
+        System.out.println("----getACL----:" + acl.getValue());
+    }
+
 
 
     public static void main(String[] args) {
@@ -144,6 +157,7 @@ public class ConsulApi {
         addService("consul-server-1104", "consul-server");
         findService();
         findHealthyService("consul-client", true);
+        deleteService("consul-server-1104");
 
         // 查询
         findMembers();
@@ -151,16 +165,20 @@ public class ConsulApi {
 
         // KV
         setKV("key1", "value1");
-        getKV("key1");
-        deleteKV("key1");
-
-        findRaftPeers();
-        findRaftLeader();
+        getKV("key_1");
+        deleteKV("key_1");
 
         // 数据中心
         getDatacenters();
 
-        //createACL();
+        // ACL
+        createACL();
         updACL();
+        getACLList();
+        getACL();
+
+
+        findRaftPeers();
+        findRaftLeader();
     }
 }

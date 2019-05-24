@@ -22,7 +22,8 @@ spring:
         instanceId: ${spring.application.name}:${server.port}
         health-check-interval: 5s
         service-name: ${spring.application.name} #设置 注册到 consul 的服务名称
-#        ip-address: ${spring.cloud.consul.host} # 访问服务时使用的 ip地址 （还必须设置preferIpAddress才能使用）
+        acl-token: 6171fe30-1138-4127-9b08-60069e945550
+  #        ip-address: ${spring.cloud.consul.host} # 访问服务时使用的 ip地址 （还必须设置preferIpAddress才能使用）
 #        prefer-ip-address: true
   application:
     name: consul-server
