@@ -1,4 +1,4 @@
-package com.pass.util.restful_api.consul;
+package com.pass.api.consul;
 
 import com.alibaba.fastjson.JSONObject;
 import org.apache.http.HttpResponse;
@@ -19,7 +19,7 @@ import java.util.Map;
  * @author yuanzhonglin
  * @date 2019/5/22
  */
-public class ConsulApi {
+public class RestFulConsulApi {
     public static void main(String[] args) throws Exception{
 
 

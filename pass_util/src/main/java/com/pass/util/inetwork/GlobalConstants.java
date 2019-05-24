@@ -1,4 +1,4 @@
-package com.pass.util.common;
+package com.pass.util.inetwork;
 
 import com.pass.util.string.StringUtils;
 

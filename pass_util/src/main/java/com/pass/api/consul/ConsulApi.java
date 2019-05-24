@@ -1,4 +1,4 @@
-package com.pass.util.api.consul;
+package com.pass.api.consul;
 
 import com.alibaba.fastjson.JSONObject;
 import com.ecwid.consul.v1.ConsulClient;

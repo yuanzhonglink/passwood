@@ -1,4 +1,4 @@
-package com.pass.util.config.util;
+package com.pass.util.filter_inter.util;
 
 import lombok.extern.slf4j.Slf4j;
 

@@ -1,4 +1,4 @@
-package com.pass.util.config.filter;
+package com.pass.util.filter_inter.filter;
 
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;

@@ -1,6 +1,6 @@
 package com.pass.util.license.swing;
 
-import com.pass.util.common.GlobalConstants;
+import com.pass.util.inetwork.GlobalConstants;
 import com.pass.util.date.DateUtils;
 import com.pass.util.license.util.CreateLicense;
 import com.pass.util.math.MathUtils;

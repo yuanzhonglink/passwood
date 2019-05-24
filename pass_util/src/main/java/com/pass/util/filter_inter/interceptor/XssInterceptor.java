@@ -1,7 +1,7 @@
-package com.pass.util.config.interceptor;
+package com.pass.util.filter_inter.interceptor;
 
 import com.alibaba.fastjson.JSONObject;
-import com.pass.util.config.util.XssUtil;
+import com.pass.util.filter_inter.util.XssUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.ModelAndView;

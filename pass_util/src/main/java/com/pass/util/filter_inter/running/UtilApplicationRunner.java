@@ -1,4 +1,4 @@
-package com.pass.util.config.running;
+package com.pass.util.filter_inter.running;
 
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;

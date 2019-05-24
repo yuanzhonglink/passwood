@@ -1,4 +1,4 @@
-package com.pass.util.config.filter;
+package com.pass.util.filter_inter.filter;
 
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
