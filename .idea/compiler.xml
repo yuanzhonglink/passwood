@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="pass_consul_client" />
+        <module name="pass_consul_server" />
+        <module name="pass_file" />
+        <module name="pass_util" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="pass_consul_client" target="1.8" />
+      <module name="pass_consul_server" target="1.8" />
+      <module name="pass_encrypt_decode" target="1.8" />
+      <module name="pass_excel" target="1.8" />
+      <module name="pass_file" target="1.8" />
+      <module name="pass_hystrix_dashboard" target="1.8" />
+      <module name="pass_license" target="1.8" />
+      <module name="pass_read" target="1.8" />
+      <module name="pass_util" target="1.8" />
+      <module name="passwood" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="pass_consul_client" options="-parameters" />
+      <module name="pass_consul_server" options="-parameters" />
+      <module name="pass_encrypt_decode" options="-parameters" />
+      <module name="pass_excel" options="-parameters" />
+      <module name="pass_file" options="-parameters" />
+      <module name="pass_hystrix_dashboard" options="-parameters" />
+      <module name="pass_license" options="-parameters" />
+      <module name="pass_read" options="-parameters" />
+      <module name="pass_util" options="-parameters" />
+    </option>
+  </component>
+</project>
