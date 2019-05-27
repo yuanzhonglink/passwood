@@ -19,7 +19,7 @@ package com.pass.util.encrypt;
 /**
  * 字节工具类
  *
- * @author sxp
+ * @author yuanzhonglin
  * @since 2017/9/29
  */
 public class Bytes {
@@ -32,7 +32,7 @@ public class Bytes {
      * 参考资料：https://stackoverflow.com/questions/9655181/how-to-convert-a-byte-array-to-a-hex-string-in-java
      * <p/>
      *
-     * @author sxp
+     * @author yuanzhonglin
      * @since 2017/9/29
      */
     public static String toHexString(byte[] bytes) {

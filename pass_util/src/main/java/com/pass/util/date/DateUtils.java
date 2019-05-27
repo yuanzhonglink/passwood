@@ -12,10 +12,10 @@ import java.util.concurrent.TimeUnit;
 import static java.util.concurrent.TimeUnit.*;
 
 /**
- * 日期工具类
+ * 时间工具类
  * 
- * @author Shawpin Shi
- * @since Aug 21, 2016
+ * @Author yuanzhonglin
+ * @since 2019/5/27
  */
 public class DateUtils {
 	/**
@@ -33,7 +33,7 @@ public class DateUtils {
 	/**
 	 * 获取当前日期和时间
 	 *
-	 * @author Shawpin Shi
+	 * @author yuanzhonglin
 	 * @since 2018/7/26
 	 */
 	public static Date getTodayTime() {
@@ -43,7 +43,7 @@ public class DateUtils {
 	/**
 	 * 获取当前日期，不包括时间
 	 *
-	 * @author Shawpin Shi
+	 * @author yuanzhonglin
 	 * @since 2018/7/26
 	 */
 	public static Date getToday() {
@@ -62,7 +62,7 @@ public class DateUtils {
 	/**
 	 * 将带有时分秒的Date对象截去时间(只保留日期部分)
 	 *
-	 * @author Shawpin Shi
+	 * @author yuanzhonglin
 	 * @since 2018/8/7
 	 */
 	public static Date truncateTime(Date dateTime) {
@@ -88,7 +88,7 @@ public class DateUtils {
 	 * 
 	 * @param dateString 时间的字符串，例如：2016-07-22
 	 * @param format 字符串匹配模式，例如：yyyy-MM-dd
-	 * @author Shawpin Shi
+	 * @author yuanzhonglin
 	 * @since Apr 9, 2017
 	 */
 	public static boolean isDate(String dateString, String format) {
@@ -109,7 +109,7 @@ public class DateUtils {
 	 * @param dateString 时间的字符串，例如：2016-07-22
 	 * @param format 字符串匹配模式，例如：yyyy-MM-dd
 	 * @return 返回dateString对应的Date对象
-	 * @author Shawpin Shi
+	 * @author yuanzhonglin
 	 * @since Jul 22, 2016
 	 */
 	public static Date stringToDate(String dateString, String format) {
@@ -139,7 +139,7 @@ public class DateUtils {
 	 * 
 	 * @param date 时间
 	 * @param format 字符串匹配模式，例如：yyyy-MM-dd
-	 * @author Shawpin Shi
+	 * @author yuanzhonglin
 	 * @since Jul 22, 2016
 	 */
 	public static String dateToString(Date date, String format) {
@@ -164,7 +164,7 @@ public class DateUtils {
 	 * @param dateString 时间的字符串，例如：2016-07-22
 	 * @param format 字符串匹配模式，例如：yyyy-MM-dd
 	 * @return 返回dateString对应的Date对象
-	 * @author Shawpin Shi
+	 * @author yuanzhonglin
 	 * @since 2018-05-14
 	 */
 	public static Date utcStringToDate(String dateString, String format) {
@@ -233,7 +233,7 @@ public class DateUtils {
 	 *
 	 * @param date 日期
 	 * @param yearNumber 增加的年数，可以是负数
-	 * @author Shawpin Shi
+	 * @author yuanzhonglin
 	 * @since Jul 12, 2018
 	 */
 	public static Date addYear(Date date, int yearNumber) {
@@ -255,7 +255,7 @@ public class DateUtils {
 	 * @param beginDate 被减数
 	 * @param endDate 减数
 	 * @return 返回endDate-beginDate(减数-被减数)的结果，小数部分直接舍去
-	 * @author Shawpin Shi
+	 * @author yuanzhonglin
 	 * @since Jul 22, 2016
 	 */
 	public static long getDayDifference(Date beginDate, Date endDate) {
@@ -278,7 +278,7 @@ public class DateUtils {
 	 * @param beginDate 被减数
 	 * @param endDate 减数
 	 * @return 返回值小数部分直接舍去
-	 * @author Shawpin Shi
+	 * @author yuanzhonglin
 	 * @since Aug 21, 2016
 	 */
 	public static long getMonthDifference(Date beginDate, Date endDate) {
@@ -321,7 +321,7 @@ public class DateUtils {
 	 * </p>
 	 * 
 	 * @param yearNum 年度的整数，例如：2016
-	 * @author Shawpin Shi
+	 * @author yuanzhonglin
 	 * @since Jul 22, 2016
 	 */
 	public static boolean isLeapYear(int yearNum) {
@@ -335,7 +335,7 @@ public class DateUtils {
 	/**
 	 * 取某个日期所属月份的最后一天(整数形式)
 	 * 
-	 * @author Shawpin Shi
+	 * @author yuanzhonglin
 	 * @since Aug 21, 2016
 	 */
 	public static int getLastDayIntegerOfMonth(Date date) {
@@ -348,7 +348,7 @@ public class DateUtils {
 	/**
 	 * 取某个日期所属月份的最后一天（字符串形式）
 	 * 
-	 * @author Shawpin Shi
+	 * @author yuanzhonglin
 	 * @since Aug 21, 2016
 	 */
 	public static String getLastDayOfMonth(Date date) {
@@ -360,7 +360,7 @@ public class DateUtils {
 	/**
 	 * 获取某个日期是星期几（中文）
 	 * 
-	 * @author Shawpin Shi
+	 * @author yuanzhonglin
 	 * @since Aug 21, 2016
 	 */
 	public static String getChineseWeek(Date date) {
@@ -399,7 +399,7 @@ public class DateUtils {
 	 * 2016-10-20T16:00:00.000000000Z对应的中国时间为2016-10-21 00:00:00。
 	 * </pre>
 	 * 
-	 * @author Shawpin Shi
+	 * @author yuanzhonglin
 	 * @since Oct 21, 2016
 	 * @since 2016-11-24 modify by sxp 正确的单位转换为：1毫秒=1000*1000纳秒
 	 */
@@ -466,7 +466,7 @@ public class DateUtils {
 	/**
 	 * 根据本地时间获取UTC时间的字符串
 	 * 
-	 * @author Shawpin Shi
+	 * @author yuanzhonglin
 	 * @since Oct 21, 2016
 	 * @since 2016-11-24 modify by sxp 正确的单位转换为：1毫秒=1000*1000纳秒
 	 */
@@ -508,7 +508,7 @@ public class DateUtils {
 	 * 选择合适的时间单位，舍入计算后所得数值的所有位数为4位，例如：1.000 ns , 1.235 ms
 	 * <p/>
 	 *
-	 * @author Shawpin Shi
+	 * @author yuanzhonglin
 	 * @since 2017/11/14
 	 */
 	public static String getElapsedTimeWith4Digits(Date begin, Date end) {
@@ -563,7 +563,7 @@ public class DateUtils {
 	/**
 	 * 获取日期对应的时间戳
 	 *
-	 * @author sxp
+	 * @author yuanzhonglin
 	 * @since 2019/3/20
 	 */
 	public static String getTimestamp(String timeS){

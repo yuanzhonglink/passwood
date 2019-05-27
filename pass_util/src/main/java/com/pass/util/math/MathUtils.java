@@ -6,14 +6,14 @@ import java.math.BigDecimal;
 /**
  * 数学工具类
  * 
- * @author Shawpin Shi
+ * @author yuanzhonglin
  * @since Jun 30, 2016
  */
 public class MathUtils {
 	/**
 	 * 判定一个字符串是不是数值
 	 * 
-	 * @author Shawpin Shi
+	 * @author yuanzhonglin
 	 * @since Jun 30, 2016
 	 */
 	public static boolean isNumber(String numberString) {
@@ -28,7 +28,7 @@ public class MathUtils {
 	/**
 	 * 将字符串转化为double值返回，如果字符串不是数字返回0
 	 *
-	 * @author Shawpin Shi
+	 * @author yuanzhonglin
 	 * @since 2017/12/10
 	 */
 	public static double paseDouble(String numberString) {
@@ -42,7 +42,7 @@ public class MathUtils {
 	/**
 	 * 判定一个字符串是不是整数
 	 *
-	 * @author Shawpin Shi
+	 * @author yuanzhonglin
 	 * @since 2017/12/10
 	 */
 	public static boolean isInteger(String numberString) {
@@ -59,7 +59,7 @@ public class MathUtils {
 	 * 
 	 * @param sourceNum 原来的数字
 	 * @param scale 需要保留的精度，即小数点后的位数
-	 * @author Shawpin Shi
+	 * @author yuanzhonglin
 	 * @since Jun 30, 2016
 	 * @since 2018-08-29 删除原来先保留20位小数的的两行代码
 	 */
@@ -79,7 +79,7 @@ public class MathUtils {
 	 *
 	 * @param sourceNum 原来的数字
 	 * @param scale 需要保留的精度，即小数点后的位数
-	 * @author Shawpin Shi
+	 * @author yuanzhonglin
 	 * @since Jun 30, 2016
 	 * @since 2018-08-29 删除原来先保留20位小数的的两行代码
 	 */
@@ -101,7 +101,7 @@ public class MathUtils {
 	 * </p>
 	 * 
 	 * @param base 对数的底
-	 * @author Shawpin Shi
+	 * @author yuanzhonglin
 	 * @since May 20, 2017
 	 */
 	public static double log(double base, double value) {
@@ -111,7 +111,7 @@ public class MathUtils {
 	/**
 	 * 将数字或字符串转换为整数
 	 *
-	 * @author Shawpin Shi
+	 * @author yuanzhonglin
 	 * @since 2018/5/25
 	 */
 	public static int castToInt(Object value) {
@@ -153,7 +153,7 @@ public class MathUtils {
 	/**
 	 * 将数字或字符串转换为长整数
 	 *
-	 * @author Shawpin Shi
+	 * @author yuanzhonglin
 	 * @since 2018/5/25
 	 */
 	public static long castToLong(Object value) {
@@ -190,7 +190,7 @@ public class MathUtils {
 	/**
 	 * 将数字或字符串转换为Double
 	 *
-	 * @author Shawpin Shi
+	 * @author yuanzhonglin
 	 * @since 2018/5/25
 	 */
 	public static double castToDouble(Object value) {
@@ -223,7 +223,7 @@ public class MathUtils {
 	/**
 	 * 将数字或字符串转换为整数，转换过程中如果出现异常则返回0
 	 *
-	 * @author Shawpin Shi
+	 * @author yuanzhonglin
 	 * @since 2018/5/25
 	 */
 	public static int castToIntNoException(Object value) {
@@ -237,7 +237,7 @@ public class MathUtils {
 	/**
 	 * 将数字或字符串转换为长整数，转换过程中如果出现异常则返回0
 	 *
-	 * @author Shawpin Shi
+	 * @author yuanzhonglin
 	 * @since 2018/5/25
 	 */
 	public static long castToLongNoException(Object value) {
@@ -251,7 +251,7 @@ public class MathUtils {
 	/**
 	 * 将数字或字符串转换为Double，转换过程中如果出现异常则返回0
 	 *
-	 * @author Shawpin Shi
+	 * @author yuanzhonglin
 	 * @since 2018/5/25
 	 */
 	public static double castToDoubleNoException(Object value) {

@@ -28,7 +28,7 @@ import java.security.Key;
 /**
  * DES加密工具类
  *
- * @author sxp
+ * @author yuanzhonglin
  * @since 2019/2/12
  */
 public class DesEncryptUtils {
