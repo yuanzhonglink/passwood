@@ -15,6 +15,7 @@ import com.ecwid.consul.v1.agent.model.Service;
 import com.ecwid.consul.v1.coordinate.model.Datacenter;
 import com.ecwid.consul.v1.health.model.HealthService;
 import com.ecwid.consul.v1.kv.model.GetValue;
+import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
 import java.util.List;
@@ -26,6 +27,7 @@ import java.util.Map;
  * @author yuanzhonglin
  * @date 2019/5/22
  */
+@Component
 public class ConsulApi {
 
     // token值

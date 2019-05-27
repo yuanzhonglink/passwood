@@ -46,6 +46,7 @@
         <fastjson.version>1.2.54</fastjson.version>
         <consul-api.version>1.4.2</consul-api.version>
         <protobuf-java.version>3.5.1</protobuf-java.version>
+        <spring-amqp.version>1.7.5.RELEASE</spring-amqp.version>
     </properties>
 
     <!-- 引入的包存在于每个model中 -->
@@ -157,6 +158,14 @@
                 <artifactId>protobuf-java</artifactId>
                 <version>${protobuf-java.version}</version>
             </dependency>
+
+            <!--rabbitMQ-->
+            <dependency>
+                <groupId>org.springframework.amqp</groupId>
+                <artifactId>spring-amqp</artifactId>
+                <version>${spring-amqp.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 

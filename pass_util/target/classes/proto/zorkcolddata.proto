@@ -1,0 +1,37 @@
+syntax = "proto3";
+option java_multiple_files = true;
+option java_package = "com.zork.colddata";
+option java_outer_classname = "ZorkColdDataProto";
+package com.zork.colddata;
+
+service ZorkColdData {
+    rpc searchEs (ZorkColdDataRequest) returns (ZorkColdDataReply) {}
+}
+
+message ZorkColdDataRequest {
+    string  username    =   1;
+    string  password    =   2;
+    string  systemId    =   3;
+    string  role    =   4;
+    string  appprogramID    =   5;
+    string  type    =   6;
+    string  programName =   7;
+    string  keywordName =   8;
+    string  keyword =   9;
+    string  startTime   =   10;
+    string  endTime =   11;
+    int32   pageSize    =   12;
+    int32   pageNo  =   13;
+    string  source  =   14;
+    string  uuidToken   =   15;
+    string  isTrace =   16;
+    string  secret  =   17;
+}
+
+message ZorkColdDataReply {
+    string  code    =   1;
+    string  data    =   2;
+    int32   total   =   3;
+    string  message =   4;
+    string  uuidToken   =   5;
+}
