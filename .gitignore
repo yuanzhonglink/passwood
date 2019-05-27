@@ -4,6 +4,11 @@
 
 # IntelliJ project files
 target
+.idea
 *.iml
+.settings
+.project
+*.log
+.classpath
 out
 gen
