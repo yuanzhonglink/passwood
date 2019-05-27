@@ -34,7 +34,7 @@ public class ConsulClientController {
 
     @RequestMapping(value = "/method_1",method = RequestMethod.GET)
     @HystrixCommand(fallbackMethod = "fallback")
-    public String method_1(){
+    public String method_one(){
         List<String> list = discoveryClient.getServices();
         Iterator<String> listIterator = list.iterator();
         while (listIterator.hasNext()) {
