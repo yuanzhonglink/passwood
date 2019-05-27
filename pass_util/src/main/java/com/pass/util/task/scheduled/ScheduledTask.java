@@ -49,7 +49,7 @@ public class ScheduledTask {
 
     /**
      * 1.延迟initialDelay时间，任务开始周期执行
-     * 2.效果：上一次任务执行完毕后，延迟时间段，开始下一次执行
+     * 2.效果：上一次任务执行完毕后，再进行延迟时间段，开始下一次执行
      */
     public void delayTwo() {
         scheduledExecutor.scheduleWithFixedDelay(new Runnable() {

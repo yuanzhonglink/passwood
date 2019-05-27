@@ -1,7 +1,7 @@
 package com.pass.common;
 
 /**
- *
+ * Runtime单例
  *
  * @Author yuanzhonglin
  * @since 2019/5/24

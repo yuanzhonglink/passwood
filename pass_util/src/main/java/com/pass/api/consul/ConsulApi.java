@@ -21,15 +21,18 @@ import java.util.List;
 import java.util.Map;
 
 /**
+ * Consul--API
+ *
  * @author yuanzhonglin
  * @date 2019/5/22
  */
 public class ConsulApi {
 
+    // token值
     private static final String ACL_TOKEN = "6171fe30-1138-4127-9b08-60069e945550";
 
+    // 初始化ConsulClient
     private static ConsulClient consulClient = initConsul();
-
     private static ConsulClient initConsul(){
         consulClient = new ConsulClient("192.168.32.15", 9500);
         return consulClient;
@@ -44,10 +47,10 @@ public class ConsulApi {
         newService.setPort(1104);
         newService.setAddress("192.168.32.15");
 
+        // 安全校验
         NewService.Check serviceCheck = new NewService.Check();
         serviceCheck.setHttp("http://127.0.0.1:1101/consul/health");
         serviceCheck.setInterval("10s");
-
         newService.setCheck(serviceCheck);
 
         consulClient.agentServiceRegister(newService, ACL_TOKEN);
@@ -99,16 +102,6 @@ public class ConsulApi {
         consulClient.deleteKVValue(key, ACL_TOKEN);
     }
 
-    public static void findRaftPeers() {
-        Response<List<String>> listResponse = consulClient.getStatusPeers();
-        System.out.println("----findRaftPeers----:" + listResponse.getValue());
-    }
-
-    public static void findRaftLeader() {
-        Response<String> stringResponse = consulClient.getStatusLeader();
-        System.out.println("----findRaftLeader----:" + stringResponse.getValue());
-    }
-
     // 获取数据中心
     public static void getDatacenters() {
         Response<List<String>> response = consulClient.getCatalogDatacenters();
@@ -151,6 +144,15 @@ public class ConsulApi {
     }
 
 
+    public static void findRaftPeers() {
+        Response<List<String>> listResponse = consulClient.getStatusPeers();
+        System.out.println("----findRaftPeers----:" + listResponse.getValue());
+    }
+
+    public static void findRaftLeader() {
+        Response<String> stringResponse = consulClient.getStatusLeader();
+        System.out.println("----findRaftLeader----:" + stringResponse.getValue());
+    }
 
     public static void main(String[] args) {
         // 服务
