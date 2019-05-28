@@ -19,6 +19,8 @@
         <module>pass_consul_client</module>
         <module>pass_consul_server</module>
         <module>pass_util</module>
+        <module>pass_grpc_server</module>
+        <module>pass_grpc_client</module>
     </modules>
 
     <parent>

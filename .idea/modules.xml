@@ -5,6 +5,8 @@
       <module fileurl="file://$PROJECT_DIR$/pass_consul_client/pass_consul_client.iml" filepath="$PROJECT_DIR$/pass_consul_client/pass_consul_client.iml" />
       <module fileurl="file://$PROJECT_DIR$/pass_consul_server/pass_consul_server.iml" filepath="$PROJECT_DIR$/pass_consul_server/pass_consul_server.iml" />
       <module fileurl="file://$PROJECT_DIR$/pass_file/pass_file.iml" filepath="$PROJECT_DIR$/pass_file/pass_file.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pass_grpc_client/pass_grpc_client.iml" filepath="$PROJECT_DIR$/pass_grpc_client/pass_grpc_client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pass_grpc_server/pass_grpc_server.iml" filepath="$PROJECT_DIR$/pass_grpc_server/pass_grpc_server.iml" />
       <module fileurl="file://$PROJECT_DIR$/pass_util/pass_util.iml" filepath="$PROJECT_DIR$/pass_util/pass_util.iml" />
       <module fileurl="file://$PROJECT_DIR$/passwood.iml" filepath="$PROJECT_DIR$/passwood.iml" />
     </modules>
