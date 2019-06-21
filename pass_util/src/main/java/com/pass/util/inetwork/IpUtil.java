@@ -17,7 +17,12 @@ import java.util.regex.Pattern;
  * @Description: 获取本机ip
  */
 @Slf4j
-public class InetWorkHost {
+public class IpUtil {
+
+    public static final String IP_MATCHER = "([0-9]|[1-9]\\d|1\\d{2}|2[0-4]\\d|25[0-5])(\\.(\\d|[1-9]\\d|1\\d{2}|2[0-4]\\d|25[0-5])){3}";
+
+    public static final String PORT_MATCHER = "([0-9]|[1-9]\\d{1,3}|[1-5]\\d{4}|6[0-4]\\d{4}|65[0-4]\\d{2}|655[0-2]\\d|6553[0-5])";
+
 
     private static final Pattern IP_PATTERN = Pattern.compile("((2[0-4]\\d|25[0-5]|[01]?\\d\\d?)\\.){3}(2[0-4]\\d|25[0-5]|[01]?\\d\\d?)");
 
