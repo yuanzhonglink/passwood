@@ -31,7 +31,7 @@
             <groupId>org.apache.zookeeper</groupId>
             <artifactId>zookeeper</artifactId>
             <!-- 与服务器安装的Zookeeper版本相同 -->
-            <version>3.4.10</version>
+            <version>3.4.14</version>
         </dependency>
     </dependencies>
 </project>
