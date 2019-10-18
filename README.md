@@ -1,6 +1,5 @@
 ### Welcome to PassWood  
-Only some tools<br/>
-
+- - -
 # 一级标题
 ## 二级标题
 ...
@@ -25,3 +24,31 @@ Only some tools<br/>
 - - -
 #### 图片
 ![图片](https://github.com/yuanzhonglink/passwood/blob/master/file/photo.jpg)
+- - -
+#### 代码块
+单行：<br/>
+`String str = new String();`<br/>
+多行：<br/>
+```
+String str = new String();
+int i = 0;
+```
+- - -
+#### 表格
+| name | age | sex |
+|:----:|:----:|:----:|
+| Tom  | 20 | 男 |
+| Jim |  21| 女 |
+- - -
+#### 强调
+_倾斜_<br/>
+__加粗__
+- - -
+#### 转义
+* \!
+* \`
+* \*
+- - -
+#### 删除线
+~~怎么还不删我~~<br/>
+- - -
