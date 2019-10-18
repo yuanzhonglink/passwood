@@ -36,7 +36,7 @@ import java.util.logging.Logger;
 public class CuratorMonitorUtilsTest {
 	private static Logger logger = Logger.getLogger(CuratorMonitorUtilsTest.class.getName());
 
-	private static String connectionString = "127.0.0.1:2181,127.0.0.2:2181";
+	private static String connectionString = "127.0.0.1:2181";
 	private static CuratorFramework client;
 	private static String localIp = IpUtils.getLocalHostAddress();
 
@@ -259,7 +259,7 @@ public class CuratorMonitorUtilsTest {
 
 	@Test
 	public void testTreeListener() throws Exception {
-		String root = "/yuanzhonglin";
+		String root = "/dubbo/config";
 
 		if (!CuratorUtils.isNodeExists(client, root)) {
 			CuratorUtils.createNode(client, root, new byte[0]);
@@ -268,43 +268,47 @@ public class CuratorMonitorUtilsTest {
 		TreeCacheListener listener = new MyTreeCacheListener();
 		TreeCache cache = CuratorMonitorUtils.treeListenter(client, root, listener);
 
-		byte[] data = localIp.getBytes(StandardCharsets.UTF_8);
+		while (true) {
 
-		// add
-		CuratorTransaction transaction = client.inTransaction();
-		transaction.create().forPath(root + "/test1", data)
-				.and()
-				.create().forPath(root + "/test2", data)
-				.and()
-				.create().forPath(root + "/test3", data)
-				.and()
-				.create().forPath(root + "/test3/test31", data)
-				.and()
-				.commit();// 提交事务
+		}
 
-		CuratorUtils.createNode(client, root + "/test4", data);
+//		byte[] data = localIp.getBytes(StandardCharsets.UTF_8);
+//
+//		// add
+//		CuratorTransaction transaction = client.inTransaction();
+//		transaction.create().forPath(root + "/test1", data)
+//				.and()
+//				.create().forPath(root + "/test2", data)
+//				.and()
+//				.create().forPath(root + "/test3", data)
+//				.and()
+//				.create().forPath(root + "/test3/test31", data)
+//				.and()
+//				.commit();// 提交事务
+//
+//		CuratorUtils.createNode(client, root + "/test4", data);
+//
+//		// update
+//		byte[] timeData = String.valueOf(System.currentTimeMillis()).getBytes(StandardCharsets.UTF_8);
+//		CuratorUtils.updateData(client, root, timeData);
+//		CuratorUtils.updateData(client, root + "/test3/test31", timeData);
+//		TimeUnit.SECONDS.sleep(1L);
+//
+//		// delete
+//		transaction = client.inTransaction();
+//		transaction.delete().forPath(root + "/test1")
+//				.and()
+//				.delete().forPath(root + "/test2")
+//				.and()
+//				.delete().forPath(root + "/test3/test31")
+//				.and()
+//				.delete().forPath(root + "/test3")
+//				.and()
+//				.commit();
+//
+//		CuratorUtils.deleteNode(client, root + "/test4");
 
-		// update
-		byte[] timeData = String.valueOf(System.currentTimeMillis()).getBytes(StandardCharsets.UTF_8);
-		CuratorUtils.updateData(client, root, timeData);
-		CuratorUtils.updateData(client, root + "/test3/test31", timeData);
-		TimeUnit.SECONDS.sleep(1L);
-
-		// delete
-		transaction = client.inTransaction();
-		transaction.delete().forPath(root + "/test1")
-				.and()
-				.delete().forPath(root + "/test2")
-				.and()
-				.delete().forPath(root + "/test3/test31")
-				.and()
-				.delete().forPath(root + "/test3")
-				.and()
-				.commit();
-
-		CuratorUtils.deleteNode(client, root + "/test4");
-
-		CloseableUtils.closeQuietly(cache);// 使用完成后关闭监听，否则后台进程会报错
+//		CloseableUtils.closeQuietly(cache);// 使用完成后关闭监听，否则后台进程会报错
 	}
 
 	private static class MyTreeCacheListener implements TreeCacheListener {
