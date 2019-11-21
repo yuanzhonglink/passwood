@@ -22,6 +22,7 @@
         <module>pass_grpc_server</module>
         <module>pass_grpc_client</module>
         <module>pass_curator</module>
+        <module>pass_kafka</module>
     </modules>
 
     <parent>
@@ -128,6 +129,7 @@
                 <version>${mysql.version}</version>
             </dependency>
 
+            <!-- 测试 -->
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
