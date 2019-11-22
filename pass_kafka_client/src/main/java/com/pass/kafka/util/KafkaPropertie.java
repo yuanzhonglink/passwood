@@ -44,6 +44,18 @@ public class KafkaPropertie {
     @Value("${kafka.compresstion.type}")
     private String compresstionType;
 
-    @Value("${kafka.partitioner.class}")
-    private String partitionerClass;
+    @Value("${kafka.enable.auto.commit}")
+    private String enableAutoCommit;
+
+    @Value("${kafka.auto.commit.interval.ms}")
+    private int autoCmmitIntervalMs;
+
+    @Value("${kafka.session.timeout.ms}")
+    private int sessionTimeoutMs;
+
+    @Value("${kafka.max.poll.records}")
+    private int maxPollRecords;
+
+    @Value("${kafka.auto.offset.reset}")
+    private String autoOffsetReset;
 }

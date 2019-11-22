@@ -22,7 +22,8 @@
         <module>pass_grpc_server</module>
         <module>pass_grpc_client</module>
         <module>pass_curator</module>
-        <module>pass_kafka</module>
+        <module>pass_kafka_server</module>
+        <module>pass_kafka_client</module>
     </modules>
 
     <parent>

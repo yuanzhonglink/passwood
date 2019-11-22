@@ -23,8 +23,10 @@ public class KafkaProviderTask implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
+        int i = 0;
         while (true) {
-            kafkaSendServer.sendMsg("test", "hello world!");
+            kafkaSendServer.sendMsg("test", "hello world!["+ ++i +"]");
+            Thread.sleep(1000 * 20);
         }
     }
 }

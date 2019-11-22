@@ -12,7 +12,7 @@ import java.util.Properties;
 
 /**
  *
- * 功能描述:
+ * 功能描述: kafka发送消息
  *
  * @auther: yuanzhonglin
  * @date: 2018/12/14 13:17
@@ -70,7 +70,6 @@ public class KafkaSendServer {
         props.put("linger.ms", kafkaPropertie.getLingerMs());
         props.put("buffer.memory", kafkaPropertie.getBufferMemory());
         props.put("compresstion.type", kafkaPropertie.getCompresstionType());
-        props.put("partitioner.class", kafkaPropertie.getPartitionerClass());
         props.put("key.serializer", kafkaPropertie.getKeySerializer());
         props.put("value.serializer", kafkaPropertie.getValueSerializer());
         return props;

@@ -1,25 +1,24 @@
 package com.pass.kafka.task;
 
+import com.pass.kafka.util.KafkaAcceptServer;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
-import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 /**
- * Kafka消息消费
- *
  * @author yuanzhonglin
- * @date 2019/11/21
+ * @date 2019/11/22
  */
 @Component
 @Slf4j
-@Order(value = 2)
-public class KafkaConsumerTask implements ApplicationRunner {
+public class KafkaAcceptTask implements ApplicationRunner {
+    @Autowired
+    private KafkaAcceptServer kafkaAcceptServer;
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-
+        kafkaAcceptServer.acceptMessage("test");
     }
-
 }

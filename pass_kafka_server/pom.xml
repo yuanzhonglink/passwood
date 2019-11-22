@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.pass</groupId>
-    <artifactId>pass_kafka</artifactId>
+    <artifactId>pass_kafka_server</artifactId>
 
     <dependencies>
         <!-- spring集成kafka -->
