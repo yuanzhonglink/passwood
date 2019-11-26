@@ -27,6 +27,7 @@
         <module>pass_dubbo_server</module>
         <module>pass_dubbo_client</module>
         <module>pass_dubbo_api</module>
+        <module>pass_ftl</module>
     </modules>
 
     <parent>
@@ -83,6 +84,12 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+
+        <!-- freemarker 依赖 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-freemarker</artifactId>
         </dependency>
     </dependencies>
 
