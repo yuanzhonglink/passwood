@@ -191,10 +191,18 @@
                 <version>${dubbo-spring-boot}</version>
             </dependency>
 
+            <!-- zookeeper -->
             <dependency>
                 <groupId>org.apache.zookeeper</groupId>
                 <artifactId>zookeeper</artifactId>
                 <version>${zookeeper-version}</version>
+            </dependency>
+
+            <!-- jfree -->
+            <dependency>
+                <groupId>jfree</groupId>
+                <artifactId>jfreechart</artifactId>
+                <version>1.0.13</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
