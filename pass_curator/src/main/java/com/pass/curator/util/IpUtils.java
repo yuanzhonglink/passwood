@@ -18,7 +18,7 @@ import java.util.regex.Pattern;
 /**
  * IP工具类
  *
- * @author sxp
+ * @author yuanzhonglin
  * @since V1.0 2017-3-27
  */
 public final class IpUtils {
@@ -44,7 +44,7 @@ public final class IpUtils {
      * 优先使用InetAddress获取IP，获取不到再使用NetworkInterface <br>
      * </p>
      *
-     * @author sxp
+     * @author yuanzhonglin
      * @since V1.0 2017-3-27
      * @since V1.1 2017-4-11 直接调用getLocalHostAddress方法
      */
@@ -60,7 +60,7 @@ public final class IpUtils {
      * </p>
      *
      * @return 如果获取不到有效的InetAddress对象，返回127.0.0.1
-     * @author sxp
+     * @author yuanzhonglin
      * @since V1.0 2017-4-11
      */
     public static String getLocalHostAddress() {
@@ -126,7 +126,7 @@ public final class IpUtils {
     /**
      * 检验IPv4地址的合法性
      *
-     * @author sxp
+     * @author yuanzhonglin
      * @since V1.0 Apr 11, 2017
      */
     public static boolean isValidIPv4(String ip) {
@@ -139,7 +139,7 @@ public final class IpUtils {
     /**
      * 获取本机的网络接口的详细信息
      *
-     * @author sxp
+     * @author yuanzhonglin
      * @since V1.0 2016-8-24
      */
     public static List<InetAddress> getIP4ByNetworkInterface() {
@@ -186,7 +186,7 @@ public final class IpUtils {
      * 特例 127.0.0.1
      * </pre>
      *
-     * @author sxp
+     * @author yuanzhonglin
      * @since V1.0 2016-9-2
      */
     public static boolean isInnerIP(String ipAddress) {
@@ -236,7 +236,7 @@ public final class IpUtils {
     /**
      * 检查IP是否能够连通
      *
-     * @author sxp
+     * @author yuanzhonglin
      * @since V1.0 Apr 14, 2017
      */
     public static boolean isReachable(String ip) {

@@ -16,7 +16,7 @@ import java.util.List;
 /**
  * 使用Apache Curator对Zookeeper进行常用的操作工具类
  *
- * @author Shawpin Shi
+ * @author yuanzhonglin
  * @since 2017/10/25
  */
 public class CuratorUtils {
@@ -30,7 +30,7 @@ public class CuratorUtils {
 	 * 创建客户端
 	 *
 	 * @param connectString 连接zookeeper的字符串，支持集群的方式，多个地址之间使用英文逗号分隔
-	 * @author Shawpin Shi
+	 * @author yuanzhonglin
 	 * @since 2017/10/25
 	 */
 	public static CuratorFramework createClient(String connectString) {
@@ -52,7 +52,7 @@ public class CuratorUtils {
 	 * 创建带访问控制列表的客户端
 	 *
 	 * @param connectString 连接zookeeper的字符串，支持集群的方式，多个地址之间使用英文逗号分隔
-	 * @author Shawpin Shi
+	 * @author yuanzhonglin
 	 * @since 2017/10/25
 	 */
 	public static CuratorFramework createClientWithACL(String connectString) {
@@ -76,7 +76,7 @@ public class CuratorUtils {
 	/**
 	 * 判断节点是否已经存在
 	 *
-	 * @author Shawpin Shi
+	 * @author yuanzhonglin
 	 * @since 2017/10/25
 	 */
 	public static boolean isNodeExists(CuratorFramework client, String path) throws Exception {
@@ -89,7 +89,7 @@ public class CuratorUtils {
 	/**
 	 * 创建永久节点
 	 *
-	 * @author Shawpin Shi
+	 * @author yuanzhonglin
 	 * @since 2017/10/25
 	 */
 	public static boolean createNode(CuratorFramework client, String path, byte[] data) throws Exception {
@@ -104,7 +104,7 @@ public class CuratorUtils {
 	/**
 	 * 创建临时节点
 	 *
-	 * @author Shawpin Shi
+	 * @author yuanzhonglin
 	 * @since 2017/10/26
 	 */
 	public static boolean createEphemeralNode(CuratorFramework client, String path, byte[] data) throws Exception {
@@ -121,7 +121,7 @@ public class CuratorUtils {
 	/**
 	 * 读取节点的数据
 	 *
-	 * @author Shawpin Shi
+	 * @author yuanzhonglin
 	 * @since 2017/10/26
 	 */
 	public static byte[] retrieveData(CuratorFramework client, String path) throws Exception {
@@ -136,7 +136,7 @@ public class CuratorUtils {
 	/**
 	 * 修改节点的数据
 	 *
-	 * @author Shawpin Shi
+	 * @author yuanzhonglin
 	 * @since 2017/10/26
 	 */
 	public static boolean updateData(CuratorFramework client, String path, byte[] newData) throws Exception {
@@ -151,7 +151,7 @@ public class CuratorUtils {
 	/**
 	 * 删除节点
 	 *
-	 * @author Shawpin Shi
+	 * @author yuanzhonglin
 	 * @since 2017/10/26
 	 */
 	public static boolean deleteNode(CuratorFramework client, String path) throws Exception {
@@ -169,7 +169,7 @@ public class CuratorUtils {
 	 * 不会递归获取
 	 * </p>
 	 *
-	 * @author Shawpin Shi
+	 * @author yuanzhonglin
 	 * @since 2017/10/26
 	 */
 	public static List<String> getChildren(CuratorFramework client, String path) throws Exception {

@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * 默认的zookeeper访问控制列表提供者
  *
- * @author Shawpin Shi
+ * @author yuanzhonglin
  * @since 2017/10/25
  */
 public final class SystemACLProvider implements ACLProvider {

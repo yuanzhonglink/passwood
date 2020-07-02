@@ -14,7 +14,7 @@ import java.util.List;
 /**
  * 使用Apache Curator对Zookeeper进行监听的工具类
  *
- * @author Shawpin Shi
+ * @author yuanzhonglin
  * @since 2017/10/26
  */
 public class CuratorMonitorUtils {
@@ -22,7 +22,7 @@ public class CuratorMonitorUtils {
 	 * 查看并且监听子节点
 	 *
 	 * @param watcher 需要自定义一个实现Watcher接口的监听类(可以参考单元测试用例)
-	 * @author Shawpin Shi
+	 * @author yuanzhonglin
 	 * @since 2017/10/26
 	 */
 	public static List<String> getAndWatchedChildren(CuratorFramework client,
@@ -44,7 +44,7 @@ public class CuratorMonitorUtils {
 	 * </p>
 	 *
 	 * @param listener 实现PathChildrenCacheListener接口的监控类(可以参考单元测试用例)
-	 * @author Shawpin Shi
+	 * @author yuanzhonglin
 	 * @since 2017/10/26
 	 */
 	public static PathChildrenCache pathChildrenListener(CuratorFramework client,
@@ -66,7 +66,7 @@ public class CuratorMonitorUtils {
 	 * </p>
 	 *
 	 * @param listener 实现ExtendedNodeCacheListener接口的监控类(可以参考单元测试用例)
-	 * @author Shawpin Shi
+	 * @author yuanzhonglin
 	 * @since 2017/10/26
 	 */
 	public static NodeCache nodeListener(CuratorFramework client,
@@ -88,7 +88,7 @@ public class CuratorMonitorUtils {
 	 * </p>
 	 *
 	 * @param listener 实现TreeCacheListener接口的监控类(可以参考单元测试用例)
-	 * @author Shawpin Shi
+	 * @author yuanzhonglin
 	 * @since 2017/10/26
 	 */
 	public static TreeCache treeListenter(CuratorFramework client,
