@@ -28,6 +28,7 @@
         <module>pass_dubbo_client</module>
         <module>pass_dubbo_api</module>
         <module>pass_ftl</module>
+        <module>pass_openstack4j</module>
     </modules>
 
     <parent>
@@ -58,6 +59,8 @@
         <spring-amqp.version>2.0.0.RELEASE</spring-amqp.version>
         <dubbo-spring-boot>1.0.0</dubbo-spring-boot>
         <zookeeper-version>3.4.14</zookeeper-version>
+        <jfree-version>1.0.13</jfree-version>
+        <yaml-version>1.17</yaml-version>
     </properties>
 
     <!-- 引入的包存在于每个model中 -->
@@ -202,7 +205,14 @@
             <dependency>
                 <groupId>jfree</groupId>
                 <artifactId>jfreechart</artifactId>
-                <version>1.0.13</version>
+                <version>${jfree-version}</version>
+            </dependency>
+
+            <!-- yaml -->
+            <dependency>
+                <groupId>org.yaml</groupId>
+                <artifactId>snakeyaml</artifactId>
+                <version>${yaml-version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
