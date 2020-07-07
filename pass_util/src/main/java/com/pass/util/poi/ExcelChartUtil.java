@@ -126,7 +126,7 @@ public class ExcelChartUtil {
             // 创建面积图
             ecu.createAreaChart(titleArr, fldNameArr, dataList);
             //导出到文件
-            FileOutputStream out = new FileOutputStream(new File("C:\\Users\\HP\\Desktop\\excel\\aa.xlsx"));
+            FileOutputStream out = new FileOutputStream(new File("C:\\Users\\HP\\Desktop\\excel\\图表.xlsx"));
             wb.write(out);
             out.close();
         } catch (IOException e) {
@@ -169,7 +169,7 @@ public class ExcelChartUtil {
         Drawing<?> drawing = sheet.createDrawingPatriarch();
         // 画一个图区域
         // 前四个默认0，从第8行到第25行,从第0列到第6列的区域
-        ClientAnchor anchor = drawing.createAnchor(0, 0, 0, 0, 0, 8, 6, 25);
+        ClientAnchor anchor = drawing.createAnchor(0, 0, 0, 0, 0, 8, 10, 25);
         // 创建一个chart对象
         Chart chart = drawing.createChart(anchor);
         CTChart ctChart = ((XSSFChart) chart).getCTChart();
