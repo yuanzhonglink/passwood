@@ -39,7 +39,6 @@ public class JfreeUtil {
         ChartUtilities.writeChartAsPNG(lineOut, jFreeChart, 600, 300);
         // anchor主要用于设置图片的属性
         HSSFClientAnchor lineAnchor = new HSSFClientAnchor(0, 0, 0, 0, (short) 2, (short) 1, (short) 12, (short) 15);
-        lineAnchor.setAnchorType(1);
         // 插入折线图
         patriarch.createPicture(lineAnchor, wb.addPicture(lineOut.toByteArray(), HSSFWorkbook.PICTURE_TYPE_PNG));
 
@@ -53,7 +52,6 @@ public class JfreeUtil {
         ChartUtilities.writeChartAsPNG(pieOut, piePort, 600, 300);
         // anchor主要用于设置图片的属性
         HSSFClientAnchor pieAnchor = new HSSFClientAnchor(0, 0, 0, 0, (short) 2, (short) 16, (short) 12, (short) 30);
-        pieAnchor.setAnchorType(2);
         // 插入饼图
         patriarch.createPicture(pieAnchor, wb.addPicture(pieOut.toByteArray(), HSSFWorkbook.PICTURE_TYPE_PNG));
 
@@ -67,7 +65,6 @@ public class JfreeUtil {
         ChartUtilities.writeChartAsPNG(histogramOut, histogramPort, 600, 300);
         // anchor主要用于设置图片的属性
         HSSFClientAnchor histogramAnchor = new HSSFClientAnchor(0, 0, 0, 0, (short) 2, (short) 31, (short) 12, (short) 45);
-        histogramAnchor.setAnchorType(3);
         // 插入饼图
         patriarch.createPicture(histogramAnchor, wb.addPicture(histogramOut.toByteArray(), HSSFWorkbook.PICTURE_TYPE_PNG));
 

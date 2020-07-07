@@ -132,11 +132,11 @@ public class PoiToExcelCopy {
         titile_row.createCell(7);
 
         cellStyle.setFillForegroundColor(new XSSFColor(new Color(83,141,213)));
-        cellStyle.setFillPattern(CellStyle.SOLID_FOREGROUND);
-        cellStyle.setBorderBottom(HSSFCellStyle.BORDER_THIN); //下边框
-        cellStyle.setBorderLeft(HSSFCellStyle.BORDER_THIN);//左边框
-        cellStyle.setBorderTop(HSSFCellStyle.BORDER_THIN);//上边框
-        cellStyle.setBorderRight(HSSFCellStyle.BORDER_THIN);//右边框
+//        cellStyle.setFillPattern(CellStyle.SOLID_FOREGROUND);
+//        cellStyle.setBorderBottom(HSSFCellStyle.BORDER_THIN); //下边框
+//        cellStyle.setBorderLeft(HSSFCellStyle.BORDER_THIN);//左边框
+//        cellStyle.setBorderTop(HSSFCellStyle.BORDER_THIN);//上边框
+//        cellStyle.setBorderRight(HSSFCellStyle.BORDER_THIN);//右边框
 
         titile_row.getCell(0).setCellStyle(cellStyle);
         titile_row.getCell(1).setCellStyle(cellStyle);
