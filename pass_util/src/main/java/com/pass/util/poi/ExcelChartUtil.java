@@ -1,5 +1,14 @@
 package com.pass.util.poi;
 
+import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.ss.util.CellRangeAddress;
+import org.apache.poi.xssf.streaming.SXSSFRow;
+import org.apache.poi.xssf.streaming.SXSSFSheet;
+import org.apache.poi.xssf.streaming.SXSSFWorkbook;
+import org.apache.poi.xssf.usermodel.XSSFChart;
+import org.openxmlformats.schemas.drawingml.x2006.chart.*;
+import org.openxmlformats.schemas.drawingml.x2006.chart.STBarGrouping.Enum;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -7,53 +16,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import org.apache.poi.ss.usermodel.BorderStyle;
-import org.apache.poi.ss.usermodel.CellStyle;
-import org.apache.poi.ss.usermodel.Chart;
-import org.apache.poi.ss.usermodel.ClientAnchor;
-import org.apache.poi.ss.usermodel.Drawing;
-import org.apache.poi.ss.usermodel.FillPatternType;
-import org.apache.poi.ss.usermodel.HorizontalAlignment;
-import org.apache.poi.ss.usermodel.IndexedColors;
-import org.apache.poi.ss.util.CellRangeAddress;
-import org.apache.poi.xssf.streaming.SXSSFRow;
-import org.apache.poi.xssf.streaming.SXSSFSheet;
-import org.apache.poi.xssf.streaming.SXSSFWorkbook;
-import org.apache.poi.xssf.usermodel.XSSFChart;
-import org.openxmlformats.schemas.drawingml.x2006.chart.CTAreaChart;
-import org.openxmlformats.schemas.drawingml.x2006.chart.CTAreaSer;
-import org.openxmlformats.schemas.drawingml.x2006.chart.CTAxDataSource;
-import org.openxmlformats.schemas.drawingml.x2006.chart.CTBarChart;
-import org.openxmlformats.schemas.drawingml.x2006.chart.CTBarSer;
-import org.openxmlformats.schemas.drawingml.x2006.chart.CTBoolean;
-import org.openxmlformats.schemas.drawingml.x2006.chart.CTCatAx;
-import org.openxmlformats.schemas.drawingml.x2006.chart.CTChart;
-import org.openxmlformats.schemas.drawingml.x2006.chart.CTDLbls;
-import org.openxmlformats.schemas.drawingml.x2006.chart.CTLegend;
-import org.openxmlformats.schemas.drawingml.x2006.chart.CTLineChart;
-import org.openxmlformats.schemas.drawingml.x2006.chart.CTLineSer;
-import org.openxmlformats.schemas.drawingml.x2006.chart.CTMarker;
-import org.openxmlformats.schemas.drawingml.x2006.chart.CTMarkerStyle;
-import org.openxmlformats.schemas.drawingml.x2006.chart.CTNumDataSource;
-import org.openxmlformats.schemas.drawingml.x2006.chart.CTNumRef;
-import org.openxmlformats.schemas.drawingml.x2006.chart.CTPie3DChart;
-import org.openxmlformats.schemas.drawingml.x2006.chart.CTPieChart;
-import org.openxmlformats.schemas.drawingml.x2006.chart.CTPieSer;
-import org.openxmlformats.schemas.drawingml.x2006.chart.CTPlotArea;
-import org.openxmlformats.schemas.drawingml.x2006.chart.CTScaling;
-import org.openxmlformats.schemas.drawingml.x2006.chart.CTSerTx;
-import org.openxmlformats.schemas.drawingml.x2006.chart.CTStrRef;
-import org.openxmlformats.schemas.drawingml.x2006.chart.CTValAx;
-import org.openxmlformats.schemas.drawingml.x2006.chart.STAxPos;
-import org.openxmlformats.schemas.drawingml.x2006.chart.STBarDir;
-import org.openxmlformats.schemas.drawingml.x2006.chart.STBarGrouping;
-import org.openxmlformats.schemas.drawingml.x2006.chart.STBarGrouping.Enum;
-import org.openxmlformats.schemas.drawingml.x2006.chart.STDispBlanksAs;
-import org.openxmlformats.schemas.drawingml.x2006.chart.STGrouping;
-import org.openxmlformats.schemas.drawingml.x2006.chart.STLegendPos;
-import org.openxmlformats.schemas.drawingml.x2006.chart.STMarkerStyle;
-import org.openxmlformats.schemas.drawingml.x2006.chart.STOrientation;
-import org.openxmlformats.schemas.drawingml.x2006.chart.STTickLblPos;
 /**
  * excel导出图表
  *
@@ -143,8 +105,7 @@ public class ExcelChartUtil {
         sheet = wb.createSheet("sheet0");
         // drawSheet0Table(sheet,titleArr,fldNameArr,dataList);
         // 堆积=STBarGrouping.STACKED 多组=STBarGrouping.CLUSTERED
-        boolean result = drawSheet0Map(sheet, STBarGrouping.CLUSTERED, fldNameArr, dataList, titleArr);
-        System.out.println("生成柱状图(堆积or多组)-->" + result);
+        drawSheet0Map(sheet, STBarGrouping.CLUSTERED, fldNameArr, dataList, titleArr);
     }
     /**
      * 生成柱状图
@@ -212,7 +173,6 @@ public class ExcelChartUtil {
             // 选第1-6行,第1-3列作为数据区域 //1 2 3
             String numDataRange = new CellRangeAddress(1, dataList.size(), i + 1, i + 1).formatAsString(sheetName,
                     true);
-            System.out.println(numDataRange);
             ctNumRef.setF(numDataRange);
             // 添加柱状边框线
             ctBarSer.addNewSpPr().addNewLn().addNewSolidFill().addNewSrgbClr().setVal(new byte[] { 0, 0, 0 });
