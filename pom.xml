@@ -29,6 +29,7 @@
         <module>pass_dubbo_api</module>
         <module>pass_ftl</module>
         <module>pass_openstack4j</module>
+        <module>prometheus</module>
     </modules>
 
     <parent>
@@ -60,6 +61,7 @@
         <yaml-version>1.17</yaml-version>
         <poi-version>3.17</poi-version>
         <ooxml-schemas-version>1.3</ooxml-schemas-version>
+        <prometheus-simpleclient-version>0.3.0</prometheus-simpleclient-version>
     </properties>
 
     <!-- 引入的包存在于每个model中 -->
@@ -227,6 +229,23 @@
                 <groupId>org.yaml</groupId>
                 <artifactId>snakeyaml</artifactId>
                 <version>${yaml-version}</version>
+            </dependency>
+
+            <!-- prometheus-simpleclient -->
+            <dependency>
+                <groupId>io.prometheus</groupId>
+                <artifactId>simpleclient_httpserver</artifactId>
+                <version>${prometheus-simpleclient-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.prometheus</groupId>
+                <artifactId>simpleclient</artifactId>
+                <version>${prometheus-simpleclient-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.prometheus</groupId>
+                <artifactId>simpleclient_hotspot</artifactId>
+                <version>${prometheus-simpleclient-version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
