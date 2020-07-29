@@ -30,6 +30,7 @@
         <module>pass_ftl</module>
         <module>pass_openstack4j</module>
         <module>prometheus</module>
+        <module>pass_websocket</module>
     </modules>
 
     <parent>
