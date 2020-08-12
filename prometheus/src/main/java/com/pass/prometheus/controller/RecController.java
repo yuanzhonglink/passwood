@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.BufferedReader;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * @author yuanzhonglin
@@ -24,7 +26,8 @@ public class RecController {
         while ((str = reader.readLine()) != null) {
             sb.append(str);
         }
-        System.out.println("-------------------");
+        SimpleDateFormat sd = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        System.out.println("---------"+ sd.format(new Date()) +"----------");
         System.out.println(sb.toString());
         System.out.println("-------------------");
     }
