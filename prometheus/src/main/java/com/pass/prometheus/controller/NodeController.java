@@ -15,10 +15,10 @@ import java.util.Date;
  * @Description:
  */
 @RestController
-@RequestMapping("/rec")
-public class RecController {
+@RequestMapping("/node")
+public class NodeController {
 
-    @RequestMapping(value = "/demo", method = {RequestMethod.POST})
+    @RequestMapping(value = "/rec", method = {RequestMethod.POST})
     public void demo(HttpServletRequest request) throws Exception {
         BufferedReader reader = request.getReader();
         StringBuilder sb = new StringBuilder();
@@ -27,8 +27,9 @@ public class RecController {
             sb.append(str);
         }
         SimpleDateFormat sd = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        System.out.println("---------"+ sd.format(new Date()) +"----------");
+        System.out.println("node-node-node-node-"+ sd.format(new Date()) +"-node-node-node-node");
         System.out.println(sb.toString());
-        System.out.println("-------------------");
+        System.out.println();
+        System.out.println();
     }
 }
