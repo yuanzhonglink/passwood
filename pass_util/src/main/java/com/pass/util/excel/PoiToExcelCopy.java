@@ -1,14 +1,8 @@
 package com.pass.util.excel;
 
-import org.apache.poi.hssf.usermodel.HSSFCellStyle;
 import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.xssf.usermodel.XSSFCellStyle;
-import org.apache.poi.xssf.usermodel.XSSFColor;
-import org.apache.poi.xssf.usermodel.XSSFRow;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.apache.poi.xssf.usermodel.*;
 
 import java.awt.*;
 import java.io.FileInputStream;
@@ -21,8 +15,8 @@ import java.io.InputStream;
  * @date 2019/3/14
  * @Description:    生成数据表结构信息.xlsx
  * 1.sql：
- *      SELECT
- *      COLUMN_TABLE 表名,
+        SELECT
+        TABLE_NAME 表名,
         COLUMN_NAME 属性名,
         COLUMN_TYPE 数据类型,
         DATA_TYPE 字段类型,
@@ -34,7 +28,7 @@ import java.io.InputStream;
         INFORMATION_SCHEMA.COLUMNS
         where
         table_schema ='数据库名'
-        order by COLUMN_TABLE;
+        order by TABLE_NAME;
  * 2.将查询出来的信息copy到database.xlsx中
  * 3.执行下面程序
  */
