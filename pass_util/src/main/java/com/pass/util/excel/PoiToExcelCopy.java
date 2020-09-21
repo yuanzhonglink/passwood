@@ -1,13 +1,16 @@
 package com.pass.util.excel;
 
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.xssf.usermodel.*;
+import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.xssf.usermodel.XSSFCellStyle;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-import java.awt.*;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -33,10 +36,11 @@ import java.io.InputStream;
  * 3.执行下面程序
  */
 public class PoiToExcelCopy {
+    private static XSSFWorkbook wbCreat = new XSSFWorkbook();
 
     public static void main(String[] args) throws Exception {
-        String fromPath = "C:\\Users\\DELL\\Desktop\\database.xlsx";// excel存放路径
-        String toPath = "C:\\Users\\DELL\\Desktop\\数据表结构.xlsx";// 保存新EXCEL路径
+        String fromPath = "C:\\Users\\HP\\Desktop\\交接（袁中林）\\database.xlsx";// excel存放路径
+        String toPath = "C:\\Users\\HP\\Desktop\\交接（袁中林）\\数据表结构.xlsx";// 保存新EXCEL路径
 
         // 源
         InputStream in = new FileInputStream(fromPath);
@@ -44,7 +48,7 @@ public class PoiToExcelCopy {
         XSSFSheet sheet = wb.getSheet("Sheet1");
 
         // 新
-        XSSFWorkbook wbCreat = new XSSFWorkbook();
+//        XSSFWorkbook wbCreat = new XSSFWorkbook();
         XSSFCellStyle cellStyle = wbCreat.createCellStyle();
         XSSFSheet sheetCreat = wbCreat.createSheet(sheet.getSheetName());
 
@@ -125,21 +129,15 @@ public class PoiToExcelCopy {
         titile_row.createCell(6);
         titile_row.createCell(7);
 
-        cellStyle.setFillForegroundColor(new XSSFColor(new Color(83,141,213)));
-//        cellStyle.setFillPattern(CellStyle.SOLID_FOREGROUND);
-//        cellStyle.setBorderBottom(HSSFCellStyle.BORDER_THIN); //下边框
-//        cellStyle.setBorderLeft(HSSFCellStyle.BORDER_THIN);//左边框
-//        cellStyle.setBorderTop(HSSFCellStyle.BORDER_THIN);//上边框
-//        cellStyle.setBorderRight(HSSFCellStyle.BORDER_THIN);//右边框
-
-        titile_row.getCell(0).setCellStyle(cellStyle);
-        titile_row.getCell(1).setCellStyle(cellStyle);
-        titile_row.getCell(2).setCellStyle(cellStyle);
-        titile_row.getCell(3).setCellStyle(cellStyle);
-        titile_row.getCell(4).setCellStyle(cellStyle);
-        titile_row.getCell(5).setCellStyle(cellStyle);
-        titile_row.getCell(6).setCellStyle(cellStyle);
-        titile_row.getCell(7).setCellStyle(cellStyle);
+        List<CellStyle> cellStyles = tableStyle();
+        titile_row.getCell(0).setCellStyle(cellStyles.get(0));
+        titile_row.getCell(1).setCellStyle(cellStyles.get(0));
+        titile_row.getCell(2).setCellStyle(cellStyles.get(0));
+        titile_row.getCell(3).setCellStyle(cellStyles.get(0));
+        titile_row.getCell(4).setCellStyle(cellStyles.get(0));
+        titile_row.getCell(5).setCellStyle(cellStyles.get(0));
+        titile_row.getCell(6).setCellStyle(cellStyles.get(0));
+        titile_row.getCell(7).setCellStyle(cellStyles.get(0));
 
         titile_row.getCell(0).setCellValue("表名");
         titile_row.getCell(1).setCellValue("属性名");
@@ -151,5 +149,36 @@ public class PoiToExcelCopy {
         titile_row.getCell(7).setCellValue("备注");
 
         return ++newRow;
+    }
+
+    private static java.util.List<CellStyle> tableStyle() {
+        List<CellStyle> cellStyleList = new ArrayList<CellStyle>();
+        // 样式准备
+        // 标题样式
+        CellStyle style = wbCreat.createCellStyle();
+        style.setFillForegroundColor(IndexedColors.ROYAL_BLUE.getIndex());
+        style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+        style.setBorderBottom(BorderStyle.THIN); // 下边框
+        style.setBorderLeft(BorderStyle.THIN);// 左边框
+        style.setBorderTop(BorderStyle.THIN);// 上边框
+        style.setBorderRight(BorderStyle.THIN);// 右边框
+        style.setAlignment(HorizontalAlignment.CENTER);
+        cellStyleList.add(style);
+        CellStyle style1 = wbCreat.createCellStyle();
+        style1.setBorderBottom(BorderStyle.THIN); // 下边框
+        style1.setBorderLeft(BorderStyle.THIN);// 左边框
+        style1.setBorderTop(BorderStyle.THIN);// 上边框
+        style1.setBorderRight(BorderStyle.THIN);// 右边框
+        style1.setAlignment(HorizontalAlignment.CENTER);
+        cellStyleList.add(style1);
+        CellStyle cellStyle = wbCreat.createCellStyle();
+        cellStyle.setBorderTop(BorderStyle.THIN);// 上边框
+        cellStyle.setBorderBottom(BorderStyle.THIN); // 下边框
+        cellStyle.setBorderLeft(BorderStyle.THIN);// 左边框
+        cellStyle.setBorderRight(BorderStyle.THIN);// 右边框
+        cellStyle.setAlignment(HorizontalAlignment.CENTER);// 水平对齐方式
+        // cellStyle.setVerticalAlignment(VerticalAlignment.TOP);//垂直对齐方式
+        cellStyleList.add(cellStyle);
+        return cellStyleList;
     }
 }
