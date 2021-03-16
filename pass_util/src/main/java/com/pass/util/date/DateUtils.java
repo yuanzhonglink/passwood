@@ -5,6 +5,7 @@ import java.text.SimpleDateFormat;
 import java.time.chrono.IsoChronology;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
+import java.util.stream.Collectors;
 
 import static java.util.concurrent.TimeUnit.*;
 
@@ -832,4 +833,66 @@ public class DateUtils {
 		}
 		return list;
 	}
+
+
+	public static List<String> getTimes(String time, String type) throws Exception {
+		SimpleDateFormat sd = new SimpleDateFormat(STANDARD_DATE_FORMAT);
+		Date date = sd.parse(time);
+		int num = 0;
+		int field = 0;
+		int amount = 0;
+		switch (type) {
+			case "week":
+				num = 7;
+				field = Calendar.DATE;
+				amount = -1;
+				break;
+			case "month":
+				num = 10;
+				field = Calendar.DATE;
+				amount = -2;
+				break;
+			case "quarter":
+				num = 10;
+				field = Calendar.DATE;
+				amount = -8;
+				break;
+			case "year":
+				num = 12;
+				field = Calendar.MONTH;
+				amount = -1;
+				break;
+		}
+		List<String> times = new ArrayList<>();
+		times.add(sd.format(date));
+		Calendar calendar = Calendar.getInstance();
+		if (type.equals("week") || type.equals("year")) {
+			for (int i = 1; i < num; i++) {
+				calendar.setTime(date);
+				calendar.add(field, amount--);
+				times.add(sd.format(calendar.getTime()));
+			}
+		} else if (type.equals("month") || type.equals("quarter")) {
+			calendar.setTime(date);
+			for (int i = 1; i <= num; i++) {
+				calendar.add(field, amount);
+				times.add(sd.format(calendar.getTime()));
+			}
+			calendar.setTime(date);
+			if (type.equals("month")) {
+				calendar.add(Calendar.MONTH, -1);
+			} else {
+				calendar.add(Calendar.MONTH, -3);
+			}
+			times.add(sd.format(calendar.getTime()));
+		}
+		times = times.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
+		return times;
+	}
+
+	public static void main(String[] args) throws Exception{
+		List<String> times = getTimes("2020-06-01 21:13:33", "quarter");
+		times.stream().forEach(a -> System.out.println(a));
+	}
+
 }

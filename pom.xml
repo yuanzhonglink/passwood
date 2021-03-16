@@ -28,12 +28,9 @@
         <module>pass_dubbo_client</module>
         <module>pass_dubbo_api</module>
         <module>pass_ftl</module>
-        <module>pass_openstack4j</module>
-        <module>prometheus</module>
+        <module>pass_prometheus</module>
         <module>pass_websocket</module>
-        <module>pass_rabbit_one</module>
-        <module>pass_rabbit_two</module>
-        <module>pass_demo</module>
+        <module>pass_pro_alert</module>
     </modules>
 
     <parent>
