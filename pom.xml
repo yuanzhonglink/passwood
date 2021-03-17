@@ -31,6 +31,7 @@
         <module>pass_prometheus</module>
         <module>pass_websocket</module>
         <module>pass_pro_alert</module>
+        <module>pass_pro_exporter</module>
     </modules>
 
     <parent>
