@@ -32,6 +32,7 @@
         <module>pass_websocket</module>
         <module>pass_pro_alert</module>
         <module>pass_pro_exporter</module>
+        <module>pass_rabbitmq</module>
     </modules>
 
     <parent>
@@ -50,7 +51,7 @@
         <commons-codec.version>1.11</commons-codec.version>
         <druid.version>1.1.4</druid.version>
         <mysql.version>8.0.16</mysql.version>
-        <junit.version>4.13.1</junit.version>
+        <junit.version>4.13.2</junit.version>
         <spring-cloud.version>Greenwich.SR1</spring-cloud.version>
         <truelicense.version>1.32</truelicense.version>
         <fastjson.version>1.2.54</fastjson.version>
@@ -60,12 +61,13 @@
         <dubbo-spring-boot>1.0.0</dubbo-spring-boot>
         <zookeeper-version>3.4.14</zookeeper-version>
         <jfree-version>1.0.13</jfree-version>
-        <yaml-version>1.17</yaml-version>
+        <yaml-version>1.23</yaml-version>
         <poi-version>3.17</poi-version>
         <ooxml-schemas-version>1.3</ooxml-schemas-version>
         <prometheus-simpleclient-version>0.3.0</prometheus-simpleclient-version>
         <bocloud-common-version>4.3.0-RELEASE</bocloud-common-version>
         <jpa-version>2.1.4.RELEASE</jpa-version>
+        <swagger2-version>2.7.0</swagger2-version>
     </properties>
 
     <!-- 引入的包存在于每个model中 -->
@@ -104,6 +106,33 @@
                 <version>${spring-cloud.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+
+            <!--rabbitMQ-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-amqp</artifactId>
+                <version>${spring-amqp.version}</version>
+            </dependency>
+
+            <!-- Spring Boot Dubbo 依赖 -->
+            <dependency>
+                <groupId>io.dubbo.springboot</groupId>
+                <artifactId>spring-boot-starter-dubbo</artifactId>
+                <version>${dubbo-spring-boot}</version>
+            </dependency>
+
+            <!--添加Swagger依赖 -->
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${swagger2-version}</version>
+            </dependency>
+            <!--添加Swagger-UI依赖 -->
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${swagger2-version}</version>
             </dependency>
 
             <!-- 引入poi，解析workbook视图 -->
@@ -192,20 +221,6 @@
                 <groupId>com.google.protobuf</groupId>
                 <artifactId>protobuf-java</artifactId>
                 <version>${protobuf-java.version}</version>
-            </dependency>
-
-            <!--rabbitMQ-->
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-amqp</artifactId>
-                <version>${spring-amqp.version}</version>
-            </dependency>
-
-            <!-- Spring Boot Dubbo 依赖 -->
-            <dependency>
-                <groupId>io.dubbo.springboot</groupId>
-                <artifactId>spring-boot-starter-dubbo</artifactId>
-                <version>${dubbo-spring-boot}</version>
             </dependency>
 
             <!-- zookeeper -->

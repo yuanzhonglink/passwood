@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: pass_rabbitmq
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+    publisher-confirms: true
+    publisher-returns: true
+
+server:
+  port: 5011
