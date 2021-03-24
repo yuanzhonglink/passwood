@@ -7,7 +7,7 @@ import java.io.File;
 import java.net.URL;
 
 /**
- * 获取路径
+ * 获取文件路径
  *
  * @Author yuanzhonglin
  * @since 2019/4/30

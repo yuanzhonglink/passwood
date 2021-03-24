@@ -1,4 +1,4 @@
-package com.pass.util.excel;
+package com.pass.util.db_table2excel;
 
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFCellStyle;

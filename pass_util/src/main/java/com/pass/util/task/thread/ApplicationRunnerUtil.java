@@ -1,4 +1,4 @@
-package com.pass.util.running;
+package com.pass.util.task.thread;
 
 import com.pass.util.task.thread.DemoThread;
 import org.springframework.boot.ApplicationArguments;

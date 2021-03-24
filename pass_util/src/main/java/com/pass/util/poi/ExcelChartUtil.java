@@ -88,7 +88,7 @@ public class ExcelChartUtil {
             // 创建面积图
             ecu.createAreaChart(titleArr, fldNameArr, dataList);
             //导出到文件
-            FileOutputStream out = new FileOutputStream(new File("C:\\Users\\HP\\Desktop\\excel\\图表.xlsx"));
+            FileOutputStream out = new FileOutputStream(new File("C:\\Users\\HP\\Desktop\\db_table2excel\\图表.xlsx"));
             wb.write(out);
             out.close();
         } catch (IOException e) {

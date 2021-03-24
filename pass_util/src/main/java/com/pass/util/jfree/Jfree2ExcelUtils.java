@@ -25,7 +25,7 @@ import java.util.Set;
 /**
  * @author yuanzhonglin
  * @date 2020/6/13
- * @Description: 导出图表
+ * @Description: jfree实现导出图表到excel
  */
 public class Jfree2ExcelUtils {
 

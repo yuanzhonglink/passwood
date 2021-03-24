@@ -69,7 +69,7 @@ public class JfreeUtil {
         patriarch.createPicture(histogramAnchor, wb.addPicture(histogramOut.toByteArray(), HSSFWorkbook.PICTURE_TYPE_PNG));
 
         // excel2003后缀
-        FileOutputStream fileOut = new FileOutputStream("C:\\Users\\HP\\Desktop\\excel\\图.xls");
+        FileOutputStream fileOut = new FileOutputStream("C:\\Users\\HP\\Desktop\\db_table2excel\\图.xls");
         wb.write(fileOut);
         fileOut.close();
     }

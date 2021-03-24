@@ -454,7 +454,7 @@ public class XSSFUtils {
 //        testForBarChart(sheet);
 //        testForComboChart(sheet);
         // excel2003后缀
-        FileOutputStream fileOut = new FileOutputStream("C:\\Users\\HP\\Desktop\\excel\\图.xls");
+        FileOutputStream fileOut = new FileOutputStream("C:\\Users\\HP\\Desktop\\db_table2excel\\图.xls");
         wb.write(fileOut);
         fileOut.close();
     }

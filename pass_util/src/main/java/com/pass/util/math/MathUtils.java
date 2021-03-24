@@ -262,6 +262,10 @@ public class MathUtils {
 		}
 	}
 
-
+	// 获取小数点后几位
+	public static void getLastNum() {
+		String str = BigDecimal.valueOf(2.15689).setScale(3, BigDecimal.ROUND_DOWN).toString();
+		System.out.println(str);
+	}
 
 }
