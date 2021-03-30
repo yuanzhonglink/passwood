@@ -33,6 +33,7 @@
         <module>pass_pro_alert</module>
         <module>pass_pro_exporter</module>
         <module>pass_rabbitmq</module>
+        <module>pass_ldap</module>
     </modules>
 
     <parent>

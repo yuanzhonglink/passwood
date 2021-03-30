@@ -39,8 +39,9 @@ public class IpUtil {
 
         // 获取所有网卡信息
         Enumeration<NetworkInterface> interfaces = NetworkInterface.getNetworkInterfaces();
-        while (interfaces.hasMoreElements()) {
 
+        // 遍历网卡信息，获取绑定到每个网卡的ip，并筛选
+        while (interfaces.hasMoreElements()) {
             NetworkInterface anInterface = interfaces.nextElement();
             Enumeration<InetAddress> addresses = anInterface.getInetAddresses();
             while (addresses.hasMoreElements()) {

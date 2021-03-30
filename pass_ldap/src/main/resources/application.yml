@@ -1,0 +1,15 @@
+spring:
+    application:
+      name: ldap
+
+server:
+  port: 5114
+
+ldap:
+  server: ldap://127.0.0.1:11389
+  root_dn: DC=DFZQ,DC=NET
+  root_user: cn=root
+  root_password: 111111
+  pattern:
+    - uid={0},o=D1108,o=znbm,o=GS001
+    - uid={0},o=D1109,o=znbm,o=GS001
