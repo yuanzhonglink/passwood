@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: pass_xss
+
+server:
+  port: 1107
