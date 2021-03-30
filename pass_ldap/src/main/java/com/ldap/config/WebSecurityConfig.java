@@ -96,4 +96,5 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     public LDAPAuthenticationProvider ldapAuthenticationProvider(LdapAuthenticator ldapAuthenticator) {
         return new LDAPAuthenticationProvider(ldapAuthenticator);
     }
+
 }
