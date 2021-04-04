@@ -47,11 +47,17 @@ public class HttpClientUtil {
 
     static {
         RegistryBuilder<ConnectionSocketFactory> socketFactoryRegistry = RegistryBuilder.create();
+        // 配置同时支持http、https（采用绕过验证的方式处理https请求）
         socketFactoryRegistry.register("https", createSSL()).register("http", PlainConnectionSocketFactory.getSocketFactory());
+        // 创建连接池管理器
         cm = new PoolingHttpClientConnectionManager(socketFactoryRegistry.build());
+        // 最大连接数
         cm.setMaxTotal(400);
+        // 每路由最大连接数
         cm.setDefaultMaxPerRoute(100);
+        // 连接配置：SocketTimeout（获取数据的超时时间)、ConnectTimeout（建立连接的超时）、RequestTimeout（连接池获取到连接的超时时间）
         RequestConfig requestConfig = RequestConfig.custom().setSocketTimeout(12000).setConnectTimeout(5000).setConnectionRequestTimeout(1000).build();
+        // 初始化完成
         defaultClient = HttpClients.custom().setDefaultRequestConfig(requestConfig).setConnectionManager(cm).build();
     }
 
