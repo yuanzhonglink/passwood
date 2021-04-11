@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: pass_sonar
+server:
+  port: 5011

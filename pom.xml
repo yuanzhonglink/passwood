@@ -35,6 +35,7 @@
         <module>pass_rabbitmq</module>
         <module>pass_ldap</module>
         <module>pass_xss</module>
+        <module>pass_sonar</module>
     </modules>
 
     <parent>
