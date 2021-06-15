@@ -30,12 +30,13 @@
         <module>pass_ftl</module>
         <module>pass_prometheus</module>
         <module>pass_websocket</module>
-        <module>pass_pro_alert</module>
-        <module>pass_pro_exporter</module>
+        <module>pass_prometheus_alert</module>
+        <module>pass_prometheus_exporter</module>
         <module>pass_rabbitmq</module>
         <module>pass_ldap</module>
         <module>pass_xss</module>
         <module>pass_sonar</module>
+        <module>pass_poi</module>
     </modules>
 
     <parent>
@@ -72,6 +73,7 @@
         <jpa-version>2.1.4.RELEASE</jpa-version>
         <swagger2-version>2.7.0</swagger2-version>
         <reflections-version>0.9.10</reflections-version>
+        <spring-jdbc>5.1.6.RELEASE</spring-jdbc>
     </properties>
 
     <!-- 引入的包存在于每个model中 -->
@@ -286,6 +288,12 @@
                 <version>${reflections-version}</version>
             </dependency>
 
+            <!-- Spring-jdbc -->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-jdbc</artifactId>
+                <version>${spring-jdbc}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

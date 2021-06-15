@@ -1,4 +1,4 @@
-package com.pass.util.jfree;
+package com.pass.jfree.util;
 
 import org.apache.poi.hssf.usermodel.HSSFClientAnchor;
 import org.apache.poi.hssf.usermodel.HSSFPatriarch;
@@ -18,7 +18,7 @@ import java.util.Map;
  * @date 2020/6/13
  * @Description:
  */
-public class JfreeUtil {
+public class Data2ChartDemo {
     public static void main(String[] args) throws Exception {
         // excel2003工作表
         HSSFWorkbook wb = new HSSFWorkbook();
@@ -34,7 +34,7 @@ public class JfreeUtil {
         ByteArrayOutputStream lineOut = new ByteArrayOutputStream();
         // 获取折线图数据
         Map<String, Map<String, Object>> lineChartData = getLineChartData();
-        JFreeChart jFreeChart = Jfree2ExcelUtils.lineChart("宿主机/云主机新增趋势图", lineChartData, "时间", "数量");
+        JFreeChart jFreeChart = Data2Chart.lineChart("宿主机/云主机新增趋势图", lineChartData, "时间", "数量");
         // 读取chart信息至字节输出流
         ChartUtilities.writeChartAsPNG(lineOut, jFreeChart, 600, 300);
         // anchor主要用于设置图片的属性
@@ -47,7 +47,7 @@ public class JfreeUtil {
         ByteArrayOutputStream pieOut = new ByteArrayOutputStream();
         // 获取饼图数据
         Map<String, Double> pieChartData = getPieChartData();
-        JFreeChart piePort = Jfree2ExcelUtils.barChart("租户配额比例", pieChartData, font);
+        JFreeChart piePort = Data2Chart.barChart("租户配额比例", pieChartData, font);
         // 读取chart信息至字节输出流
         ChartUtilities.writeChartAsPNG(pieOut, piePort, 600, 300);
         // anchor主要用于设置图片的属性
@@ -60,7 +60,7 @@ public class JfreeUtil {
         ByteArrayOutputStream histogramOut = new ByteArrayOutputStream();
         // 获取饼图数据
         Map<String, Map<String, Object>> histogramData = getHistogramData();
-        JFreeChart histogramPort = Jfree2ExcelUtils.histogram("云主机分布图",histogramData,null,null);
+        JFreeChart histogramPort = Data2Chart.histogram("云主机分布图",histogramData,null,null);
         // 读取chart信息至字节输出流
         ChartUtilities.writeChartAsPNG(histogramOut, histogramPort, 600, 300);
         // anchor主要用于设置图片的属性

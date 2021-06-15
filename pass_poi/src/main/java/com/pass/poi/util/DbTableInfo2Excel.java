@@ -1,6 +1,12 @@
-package com.pass.util.db_table2excel;
+package com.pass.poi.util;
 
-import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.ss.usermodel.BorderStyle;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellStyle;
+import org.apache.poi.ss.usermodel.FillPatternType;
+import org.apache.poi.ss.usermodel.HorizontalAlignment;
+import org.apache.poi.ss.usermodel.IndexedColors;
+import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFCellStyle;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -35,7 +41,7 @@ import java.util.List;
  * 2.将查询出来的信息copy到database.xlsx中
  * 3.执行下面程序
  */
-public class PoiToExcelCopy {
+public class DbTableInfo2Excel {
     private static XSSFWorkbook wbCreat = new XSSFWorkbook();
 
     public static void main(String[] args) throws Exception {
@@ -151,7 +157,7 @@ public class PoiToExcelCopy {
         return ++newRow;
     }
 
-    private static java.util.List<CellStyle> tableStyle() {
+    private static List<CellStyle> tableStyle() {
         List<CellStyle> cellStyleList = new ArrayList<CellStyle>();
         // 样式准备
         // 标题样式

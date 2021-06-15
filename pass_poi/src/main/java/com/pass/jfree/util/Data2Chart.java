@@ -1,4 +1,4 @@
-package com.pass.util.jfree;
+package com.pass.jfree.util;
 
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.JFreeChart;
@@ -27,7 +27,7 @@ import java.util.Set;
  * @date 2020/6/13
  * @Description: jfree实现导出图表到excel
  */
-public class Jfree2ExcelUtils {
+public class Data2Chart {
 
     // 折线图
     public static JFreeChart lineChart(String title, Map<String, Map<String, Object>> datas, String type, String unit) throws Exception {

@@ -1,6 +1,13 @@
-package com.pass.util.poi;
+package com.pass.poi.util;
 
-import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.ss.usermodel.BorderStyle;
+import org.apache.poi.ss.usermodel.CellStyle;
+import org.apache.poi.ss.usermodel.Chart;
+import org.apache.poi.ss.usermodel.ClientAnchor;
+import org.apache.poi.ss.usermodel.Drawing;
+import org.apache.poi.ss.usermodel.FillPatternType;
+import org.apache.poi.ss.usermodel.HorizontalAlignment;
+import org.apache.poi.ss.usermodel.IndexedColors;
 import org.apache.poi.ss.util.CellRangeAddress;
 import org.apache.poi.xssf.streaming.SXSSFRow;
 import org.apache.poi.xssf.streaming.SXSSFSheet;
@@ -16,13 +23,14 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 /**
  * excel导出图表
  *
  * @Author yuanzhonglin
  * @since 2020/7/7
  */
-public class ExcelChartUtil {
+public class Data2ChartDemo {
     private static SXSSFWorkbook wb = new SXSSFWorkbook();
     private SXSSFSheet sheet = null;
 
@@ -77,7 +85,7 @@ public class ExcelChartUtil {
         dataList.add(dataMap4);
         dataList.add(dataMap5);
         dataList.add(dataMap6);
-        ExcelChartUtil ecu = new ExcelChartUtil();
+        Data2ChartDemo ecu = new Data2ChartDemo();
         try {
             // 创建柱状图
             ecu.createBarChart(titleArr, fldNameArr, dataList);

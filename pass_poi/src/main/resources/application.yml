@@ -1,0 +1,6 @@
+spring:
+    application:
+      name: pass_poi
+
+server:
+  port: 5114

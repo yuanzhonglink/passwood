@@ -1,8 +1,13 @@
-package com.pass.util.poi;
+package com.pass.poi.util;
 
 import org.apache.poi.ss.util.CellRangeAddress;
 import org.apache.poi.util.Units;
-import org.apache.poi.xssf.usermodel.*;
+import org.apache.poi.xssf.usermodel.XSSFChart;
+import org.apache.poi.xssf.usermodel.XSSFClientAnchor;
+import org.apache.poi.xssf.usermodel.XSSFColor;
+import org.apache.poi.xssf.usermodel.XSSFDrawing;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openxmlformats.schemas.drawingml.x2006.chart.*;
 
 import java.awt.*;
@@ -12,27 +17,27 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class XSSFUtils {
+public class Data2Chart {
     public static void createLineChart(XSSFSheet sheet) {
         Map<String, Object> params = new HashMap<>();
         // 图表位置（B36左上角：AA53左上角），偏移量均为0
         int[] chartPositon = new int[] {getColumnIndexByAddress("B"), 35, getColumnIndexByAddress("AA"), 52, 0, 0, 0, 0};
 
         // 设置x轴坐标区域（B60：B90），即“Day”列
-        int[] xAxisRange = new int[] {59, 89, XSSFUtils.getColumnIndexByAddress("B"), XSSFUtils.getColumnIndexByAddress("B")};
+        int[] xAxisRange = new int[] {59, 89, Data2Chart.getColumnIndexByAddress("B"), Data2Chart.getColumnIndexByAddress("B")};
 
         // 设置数据区域，即每个系列的数据（D60：D90、J60：J90、P60：P90）
         // 图例标题（D59、J59、P59）
         List<int[]> seriesRangeList = new ArrayList<>();
         seriesRangeList.add(new int[] {
-                58, 58, XSSFUtils.getColumnIndexByAddress("D"), XSSFUtils.getColumnIndexByAddress("D"),
-                59, 89, XSSFUtils.getColumnIndexByAddress("D"), XSSFUtils.getColumnIndexByAddress("D")});
+                58, 58, Data2Chart.getColumnIndexByAddress("D"), Data2Chart.getColumnIndexByAddress("D"),
+                59, 89, Data2Chart.getColumnIndexByAddress("D"), Data2Chart.getColumnIndexByAddress("D")});
         seriesRangeList.add(new int[] {
-                58, 58, XSSFUtils.getColumnIndexByAddress("J"), XSSFUtils.getColumnIndexByAddress("J"),
-                59, 89, XSSFUtils.getColumnIndexByAddress("J"), XSSFUtils.getColumnIndexByAddress("J")});
+                58, 58, Data2Chart.getColumnIndexByAddress("J"), Data2Chart.getColumnIndexByAddress("J"),
+                59, 89, Data2Chart.getColumnIndexByAddress("J"), Data2Chart.getColumnIndexByAddress("J")});
         seriesRangeList.add(new int[] {
-                58, 58, XSSFUtils.getColumnIndexByAddress("P"), XSSFUtils.getColumnIndexByAddress("P"),
-                59, 89, XSSFUtils.getColumnIndexByAddress("P"), XSSFUtils.getColumnIndexByAddress("P")});
+                58, 58, Data2Chart.getColumnIndexByAddress("P"), Data2Chart.getColumnIndexByAddress("P"),
+                59, 89, Data2Chart.getColumnIndexByAddress("P"), Data2Chart.getColumnIndexByAddress("P")});
 
         params.put("chartPosition", chartPositon);
         params.put("chartTitle", "");
@@ -51,21 +56,21 @@ public class XSSFUtils {
         Map<String, Object> params = new HashMap<String, Object>();
 
         // 图表位置（G20自左上角向右偏移50个EMU point：N39自左上角向右偏移50个EMU point）
-        int[] chartPositon = new int[] {XSSFUtils.getColumnIndexByAddress("G"), 19, XSSFUtils.getColumnIndexByAddress("N"), 38, 50, 0, 50, 0};
+        int[] chartPositon = new int[] {Data2Chart.getColumnIndexByAddress("G"), 19, Data2Chart.getColumnIndexByAddress("N"), 38, 50, 0, 50, 0};
 
         // 图表标题(A9)
-        String chartTitle = sheet.getRow(8).getCell(XSSFUtils.getColumnIndexByAddress("A")).getStringCellValue();
+        String chartTitle = sheet.getRow(8).getCell(Data2Chart.getColumnIndexByAddress("A")).getStringCellValue();
 
         // 设置x轴坐标区域（C8：N8），即“表头月份”行
-        int[] xAxisRange = new int[] {7, 7, XSSFUtils.getColumnIndexByAddress("C"), XSSFUtils.getColumnIndexByAddress("N")};
+        int[] xAxisRange = new int[] {7, 7, Data2Chart.getColumnIndexByAddress("C"), Data2Chart.getColumnIndexByAddress("N")};
 
         // 设置数据区域，即每个系列的数据（C11:N11）
         // 图例标题（B11）
         List<int[]> seriesRangeList = new ArrayList<int[]>();
         seriesRangeList.add(
                 new int[] {
-                        10, 10, XSSFUtils.getColumnIndexByAddress("B"), XSSFUtils.getColumnIndexByAddress("B"),
-                        10, 10, XSSFUtils.getColumnIndexByAddress("C"), XSSFUtils.getColumnIndexByAddress("N")});
+                        10, 10, Data2Chart.getColumnIndexByAddress("B"), Data2Chart.getColumnIndexByAddress("B"),
+                        10, 10, Data2Chart.getColumnIndexByAddress("C"), Data2Chart.getColumnIndexByAddress("N")});
 
         params.put("chartPosition", chartPositon);
         params.put("chartTitle", chartTitle);
@@ -83,29 +88,29 @@ public class XSSFUtils {
 
         // 图表位置（A20自左上角向右偏移10个EMU point：G39自左上角向右偏移30个EMU point）
         int[] chartPosition =
-                new int[] {XSSFUtils.getColumnIndexByAddress("A"), 19, XSSFUtils.getColumnIndexByAddress("G"), 38, 10, 0, 30, 0};
+                new int[] {Data2Chart.getColumnIndexByAddress("A"), 19, Data2Chart.getColumnIndexByAddress("G"), 38, 10, 0, 30, 0};
 
         // 图表标题(A9)
-        String chartTitle = sheet.getRow(8).getCell(XSSFUtils.getColumnIndexByAddress("A")).getStringCellValue();
+        String chartTitle = sheet.getRow(8).getCell(Data2Chart.getColumnIndexByAddress("A")).getStringCellValue();
 
         // 设置x轴坐标区域（C8：N8），即“表头月份”行
-        int[] xAxisRange = new int[] {7, 7, XSSFUtils.getColumnIndexByAddress("C"), XSSFUtils.getColumnIndexByAddress("N")};
+        int[] xAxisRange = new int[] {7, 7, Data2Chart.getColumnIndexByAddress("C"), Data2Chart.getColumnIndexByAddress("N")};
 
         // 柱状图设置数据区域，即每个系列的数据（C9:N9）
         // 图例标题（B9）
         List<int[]> barSeriesRangeList = new ArrayList<int[]>();
         barSeriesRangeList.add(
                 new int[] {
-                        8, 8, XSSFUtils.getColumnIndexByAddress("B"), XSSFUtils.getColumnIndexByAddress("B"),
-                        8, 8, XSSFUtils.getColumnIndexByAddress("C"), XSSFUtils.getColumnIndexByAddress("N")});
+                        8, 8, Data2Chart.getColumnIndexByAddress("B"), Data2Chart.getColumnIndexByAddress("B"),
+                        8, 8, Data2Chart.getColumnIndexByAddress("C"), Data2Chart.getColumnIndexByAddress("N")});
 
         // 折线图设置数据区域，即每个系列的数据（C10:N10）
         // 图例标题（B10）
         List<int[]> lineSeriesRangeList = new ArrayList<int[]>();
         lineSeriesRangeList.add(
                 new int[] {
-                        9, 9, XSSFUtils.getColumnIndexByAddress("B"), XSSFUtils.getColumnIndexByAddress("B"),
-                        9, 9, XSSFUtils.getColumnIndexByAddress("C"), XSSFUtils.getColumnIndexByAddress("N")});
+                        9, 9, Data2Chart.getColumnIndexByAddress("B"), Data2Chart.getColumnIndexByAddress("B"),
+                        9, 9, Data2Chart.getColumnIndexByAddress("C"), Data2Chart.getColumnIndexByAddress("N")});
 
         params.put("chartPosition", chartPosition);
         params.put("chartTitle", chartTitle);
@@ -120,7 +125,7 @@ public class XSSFUtils {
         params.put("lineIsXAxisDelete", true);
         params.put("lineYAxisPosition", "r");
 
-        XSSFUtils.createComboChart(sheet, params);
+        Data2Chart.createComboChart(sheet, params);
     }
 
     public static void createLineChart(XSSFSheet sheet, Map<String, Object> params) {
