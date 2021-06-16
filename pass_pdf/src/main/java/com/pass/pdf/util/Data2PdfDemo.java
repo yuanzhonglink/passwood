@@ -39,7 +39,7 @@ public class Data2PdfDemo {
             File file = new File("E:\\FaBen\\ShenWan\\申万宏源文档\\PDFDemo.pdf");
             file.createNewFile();
             PdfWriter writer = PdfWriter.getInstance(document, new FileOutputStream(file));
-            writer.setPageEvent(new Watermark("HELLO ITEXTPDF"));// 水印
+            writer.setPageEvent(new Watermark("yuanzhonglin"));// 水印
             writer.setPageEvent(new PageHeaderFooter());// 页眉/页脚
 
             // 3.打开文档
