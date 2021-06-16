@@ -1,0 +1,5 @@
+server:
+  port: 5506
+spring:
+  application:
+    name: pass_pdf

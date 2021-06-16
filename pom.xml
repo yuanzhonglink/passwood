@@ -37,6 +37,7 @@
         <module>pass_xss</module>
         <module>pass_sonar</module>
         <module>pass_poi</module>
+        <module>pass_pdf</module>
     </modules>
 
     <parent>
@@ -74,6 +75,8 @@
         <swagger2-version>2.7.0</swagger2-version>
         <reflections-version>0.9.10</reflections-version>
         <spring-jdbc>5.1.6.RELEASE</spring-jdbc>
+        <itextpdf>5.5.13</itextpdf>
+        <itext-asian>5.2.0</itext-asian>
     </properties>
 
     <!-- 引入的包存在于每个model中 -->
@@ -293,6 +296,18 @@
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-jdbc</artifactId>
                 <version>${spring-jdbc}</version>
+            </dependency>
+
+            <!-- pdf生成类库 -->
+            <dependency>
+                <groupId>com.itextpdf</groupId>
+                <artifactId>itextpdf</artifactId>
+                <version>${itextpdf}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.itextpdf</groupId>
+                <artifactId>itext-asian</artifactId>
+                <version>${itext-asian}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
