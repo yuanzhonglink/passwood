@@ -40,13 +40,21 @@ import java.util.List;
         order by TABLE_NAME;
  * 2.将查询出来的信息copy到database.xlsx中
  * 3.执行下面程序
+ * 4.查询表名以及表注释
+ * SELECT
+ * 	table_name 表名,
+ * 	table_comment 表注释
+ * FROM
+ * 	information_schema.TABLES
+ * WHERE
+ * 	table_schema = '数据库名';
  */
 public class DbTableInfo2Excel {
     private static XSSFWorkbook wbCreat = new XSSFWorkbook();
 
     public static void main(String[] args) throws Exception {
-        String fromPath = "C:\\Users\\HP\\Desktop\\交接（袁中林）\\database.xlsx";// excel存放路径
-        String toPath = "C:\\Users\\HP\\Desktop\\交接（袁中林）\\数据表结构.xlsx";// 保存新EXCEL路径
+        String fromPath = "C:\\Users\\Administrator\\Desktop\\新建文件夹\\database.xlsx";// excel存放路径
+        String toPath = "C:\\Users\\Administrator\\Desktop\\新建文件夹\\数据表结构.xlsx";// 保存新EXCEL路径
 
         // 源
         InputStream in = new FileInputStream(fromPath);
