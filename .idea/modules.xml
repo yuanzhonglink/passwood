@@ -4,10 +4,27 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/pass_consul_client/pass_consul_client.iml" filepath="$PROJECT_DIR$/pass_consul_client/pass_consul_client.iml" />
       <module fileurl="file://$PROJECT_DIR$/pass_consul_server/pass_consul_server.iml" filepath="$PROJECT_DIR$/pass_consul_server/pass_consul_server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pass_curator/pass_curator.iml" filepath="$PROJECT_DIR$/pass_curator/pass_curator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pass_dubbo_api/pass_dubbo_api.iml" filepath="$PROJECT_DIR$/pass_dubbo_api/pass_dubbo_api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pass_dubbo_client/pass_dubbo_client.iml" filepath="$PROJECT_DIR$/pass_dubbo_client/pass_dubbo_client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pass_dubbo_server/pass_dubbo_server.iml" filepath="$PROJECT_DIR$/pass_dubbo_server/pass_dubbo_server.iml" />
       <module fileurl="file://$PROJECT_DIR$/pass_file/pass_file.iml" filepath="$PROJECT_DIR$/pass_file/pass_file.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pass_ftl/pass_ftl.iml" filepath="$PROJECT_DIR$/pass_ftl/pass_ftl.iml" />
       <module fileurl="file://$PROJECT_DIR$/pass_grpc_client/pass_grpc_client.iml" filepath="$PROJECT_DIR$/pass_grpc_client/pass_grpc_client.iml" />
       <module fileurl="file://$PROJECT_DIR$/pass_grpc_server/pass_grpc_server.iml" filepath="$PROJECT_DIR$/pass_grpc_server/pass_grpc_server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pass_kafka_client/pass_kafka_client.iml" filepath="$PROJECT_DIR$/pass_kafka_client/pass_kafka_client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pass_kafka_server/pass_kafka_server.iml" filepath="$PROJECT_DIR$/pass_kafka_server/pass_kafka_server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pass_ldap/pass_ldap.iml" filepath="$PROJECT_DIR$/pass_ldap/pass_ldap.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pass_pdf/pass_pdf.iml" filepath="$PROJECT_DIR$/pass_pdf/pass_pdf.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pass_poi/pass_poi.iml" filepath="$PROJECT_DIR$/pass_poi/pass_poi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pass_prometheus/pass_prometheus.iml" filepath="$PROJECT_DIR$/pass_prometheus/pass_prometheus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pass_prometheus_alert/pass_prometheus_alert.iml" filepath="$PROJECT_DIR$/pass_prometheus_alert/pass_prometheus_alert.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pass_prometheus_exporter/pass_prometheus_exporter.iml" filepath="$PROJECT_DIR$/pass_prometheus_exporter/pass_prometheus_exporter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pass_rabbitmq/pass_rabbitmq.iml" filepath="$PROJECT_DIR$/pass_rabbitmq/pass_rabbitmq.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pass_sonar/pass_sonar.iml" filepath="$PROJECT_DIR$/pass_sonar/pass_sonar.iml" />
       <module fileurl="file://$PROJECT_DIR$/pass_util/pass_util.iml" filepath="$PROJECT_DIR$/pass_util/pass_util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pass_websocket/pass_websocket.iml" filepath="$PROJECT_DIR$/pass_websocket/pass_websocket.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pass_xss/pass_xss.iml" filepath="$PROJECT_DIR$/pass_xss/pass_xss.iml" />
       <module fileurl="file://$PROJECT_DIR$/passwood.iml" filepath="$PROJECT_DIR$/passwood.iml" />
     </modules>
   </component>

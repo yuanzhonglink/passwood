@@ -8,24 +8,58 @@
         <outputRelativeToContentRoot value="true" />
         <module name="pass_consul_client" />
         <module name="pass_consul_server" />
+        <module name="pass_curator" />
+        <module name="pass_dubbo_api" />
+        <module name="pass_dubbo_client" />
+        <module name="pass_dubbo_server" />
         <module name="pass_file" />
+        <module name="pass_ftl" />
         <module name="pass_grpc_client" />
         <module name="pass_grpc_server" />
+        <module name="pass_kafka_client" />
+        <module name="pass_kafka_server" />
+        <module name="pass_ldap" />
+        <module name="pass_pdf" />
+        <module name="pass_poi" />
+        <module name="pass_prometheus" />
+        <module name="pass_prometheus_alert" />
+        <module name="pass_prometheus_exporter" />
+        <module name="pass_rabbitmq" />
+        <module name="pass_sonar" />
         <module name="pass_util" />
+        <module name="pass_websocket" />
+        <module name="pass_xss" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="pass_consul_client" target="1.8" />
       <module name="pass_consul_server" target="1.8" />
+      <module name="pass_curator" target="1.8" />
+      <module name="pass_dubbo_api" target="1.8" />
+      <module name="pass_dubbo_client" target="1.8" />
+      <module name="pass_dubbo_server" target="1.8" />
       <module name="pass_encrypt_decode" target="1.8" />
       <module name="pass_excel" target="1.8" />
       <module name="pass_file" target="1.8" />
+      <module name="pass_ftl" target="1.8" />
       <module name="pass_grpc_client" target="1.8" />
       <module name="pass_grpc_server" target="1.8" />
       <module name="pass_hystrix_dashboard" target="1.8" />
+      <module name="pass_kafka_client" target="1.8" />
+      <module name="pass_kafka_server" target="1.8" />
+      <module name="pass_ldap" target="1.8" />
       <module name="pass_license" target="1.8" />
+      <module name="pass_pdf" target="1.8" />
+      <module name="pass_poi" target="1.8" />
+      <module name="pass_prometheus" target="1.8" />
+      <module name="pass_prometheus_alert" target="1.8" />
+      <module name="pass_prometheus_exporter" target="1.8" />
+      <module name="pass_rabbitmq" target="1.8" />
       <module name="pass_read" target="1.8" />
+      <module name="pass_sonar" target="1.8" />
       <module name="pass_util" target="1.8" />
+      <module name="pass_websocket" target="1.8" />
+      <module name="pass_xss" target="1.8" />
       <module name="passwood" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -33,15 +67,32 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="pass_consul_client" options="-parameters" />
       <module name="pass_consul_server" options="-parameters" />
+      <module name="pass_curator" options="-parameters" />
+      <module name="pass_dubbo_api" options="-parameters" />
+      <module name="pass_dubbo_client" options="-parameters" />
+      <module name="pass_dubbo_server" options="-parameters" />
       <module name="pass_encrypt_decode" options="-parameters" />
       <module name="pass_excel" options="-parameters" />
       <module name="pass_file" options="-parameters" />
+      <module name="pass_ftl" options="-parameters" />
       <module name="pass_grpc_client" options="-parameters" />
       <module name="pass_grpc_server" options="-parameters" />
       <module name="pass_hystrix_dashboard" options="-parameters" />
+      <module name="pass_kafka_client" options="-parameters" />
+      <module name="pass_kafka_server" options="-parameters" />
+      <module name="pass_ldap" options="-parameters" />
       <module name="pass_license" options="-parameters" />
+      <module name="pass_pdf" options="-parameters" />
+      <module name="pass_poi" options="-parameters" />
+      <module name="pass_prometheus" options="-parameters" />
+      <module name="pass_prometheus_alert" options="-parameters" />
+      <module name="pass_prometheus_exporter" options="-parameters" />
+      <module name="pass_rabbitmq" options="-parameters" />
       <module name="pass_read" options="-parameters" />
+      <module name="pass_sonar" options="-parameters" />
       <module name="pass_util" options="-parameters" />
+      <module name="pass_websocket" options="-parameters" />
+      <module name="pass_xss" options="-parameters" />
     </option>
   </component>
 </project>

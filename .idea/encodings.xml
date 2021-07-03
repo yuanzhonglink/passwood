@@ -4,9 +4,26 @@
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pass_consul_client" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pass_consul_server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pass_curator" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pass_dubbo_api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pass_dubbo_client" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pass_dubbo_server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pass_file" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pass_ftl" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pass_grpc_client" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pass_grpc_server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pass_kafka_client" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pass_kafka_server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pass_ldap" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pass_pdf" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pass_poi" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pass_prometheus" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pass_prometheus_alert" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pass_prometheus_exporter" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pass_rabbitmq" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pass_sonar" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pass_util" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pass_websocket" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pass_xss" charset="UTF-8" />
   </component>
 </project>
