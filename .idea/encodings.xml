@@ -5,6 +5,7 @@
     <file url="file://$PROJECT_DIR$/pass_consul_client" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pass_consul_server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pass_curator" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pass_docker" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pass_dubbo_api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pass_dubbo_client" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pass_dubbo_server" charset="UTF-8" />
@@ -22,6 +23,7 @@
     <file url="file://$PROJECT_DIR$/pass_prometheus_exporter" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pass_rabbitmq" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pass_sonar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pass_tuomin_sdk" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pass_util" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pass_websocket" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pass_xss" charset="UTF-8" />

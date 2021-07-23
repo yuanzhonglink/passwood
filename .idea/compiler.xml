@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -9,6 +10,7 @@
         <module name="pass_consul_client" />
         <module name="pass_consul_server" />
         <module name="pass_curator" />
+        <module name="pass_docker" />
         <module name="pass_dubbo_api" />
         <module name="pass_dubbo_client" />
         <module name="pass_dubbo_server" />
@@ -35,6 +37,7 @@
       <module name="pass_consul_client" target="1.8" />
       <module name="pass_consul_server" target="1.8" />
       <module name="pass_curator" target="1.8" />
+      <module name="pass_docker" target="1.8" />
       <module name="pass_dubbo_api" target="1.8" />
       <module name="pass_dubbo_client" target="1.8" />
       <module name="pass_dubbo_server" target="1.8" />
@@ -57,6 +60,7 @@
       <module name="pass_rabbitmq" target="1.8" />
       <module name="pass_read" target="1.8" />
       <module name="pass_sonar" target="1.8" />
+      <module name="pass_tuomin_sdk" target="1.8" />
       <module name="pass_util" target="1.8" />
       <module name="pass_websocket" target="1.8" />
       <module name="pass_xss" target="1.8" />
@@ -68,6 +72,7 @@
       <module name="pass_consul_client" options="-parameters" />
       <module name="pass_consul_server" options="-parameters" />
       <module name="pass_curator" options="-parameters" />
+      <module name="pass_docker" options="-parameters" />
       <module name="pass_dubbo_api" options="-parameters" />
       <module name="pass_dubbo_client" options="-parameters" />
       <module name="pass_dubbo_server" options="-parameters" />
@@ -90,6 +95,7 @@
       <module name="pass_rabbitmq" options="-parameters" />
       <module name="pass_read" options="-parameters" />
       <module name="pass_sonar" options="-parameters" />
+      <module name="pass_tuomin_sdk" options="-parameters" />
       <module name="pass_util" options="-parameters" />
       <module name="pass_websocket" options="-parameters" />
       <module name="pass_xss" options="-parameters" />

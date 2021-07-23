@@ -14,6 +14,7 @@
         <option value="$PROJECT_DIR$/pass_hystrix_dashboard/pom.xml" />
         <option value="$PROJECT_DIR$/pass_license/pom.xml" />
         <option value="$PROJECT_DIR$/pass_read/pom.xml" />
+        <option value="$PROJECT_DIR$/pass_tuomin_sdk/pom.xml" />
       </set>
     </option>
   </component>

@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/pass_consul_client/pass_consul_client.iml" filepath="$PROJECT_DIR$/pass_consul_client/pass_consul_client.iml" />
       <module fileurl="file://$PROJECT_DIR$/pass_consul_server/pass_consul_server.iml" filepath="$PROJECT_DIR$/pass_consul_server/pass_consul_server.iml" />
       <module fileurl="file://$PROJECT_DIR$/pass_curator/pass_curator.iml" filepath="$PROJECT_DIR$/pass_curator/pass_curator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pass_docker/pass_docker.iml" filepath="$PROJECT_DIR$/pass_docker/pass_docker.iml" />
       <module fileurl="file://$PROJECT_DIR$/pass_dubbo_api/pass_dubbo_api.iml" filepath="$PROJECT_DIR$/pass_dubbo_api/pass_dubbo_api.iml" />
       <module fileurl="file://$PROJECT_DIR$/pass_dubbo_client/pass_dubbo_client.iml" filepath="$PROJECT_DIR$/pass_dubbo_client/pass_dubbo_client.iml" />
       <module fileurl="file://$PROJECT_DIR$/pass_dubbo_server/pass_dubbo_server.iml" filepath="$PROJECT_DIR$/pass_dubbo_server/pass_dubbo_server.iml" />
