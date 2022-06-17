@@ -60,7 +60,7 @@
         <junit.version>4.13.2</junit.version>
         <spring-cloud.version>Greenwich.SR1</spring-cloud.version>
         <truelicense.version>1.32</truelicense.version>
-        <fastjson.version>1.2.54</fastjson.version>
+        <fastjson.version>1.2.83</fastjson.version>
         <consul-api.version>1.4.2</consul-api.version>
         <protobuf-java.version>3.5.1</protobuf-java.version>
         <spring-amqp.version>2.1.4.RELEASE</spring-amqp.version>
